@@ -4,97 +4,299 @@
   "title": "Chapitre 1",
   "lines": [
     {
+      "idx": 0,
       "fr": "Lorsque j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre sur la Forêt Vierge qui s'appelait « Histoires Vécues ».",
-      "es": "Cuando tenía seis años, vi una vez una magnífica lámina en un libro sobre la Selva Virgen que se llamaba «Historias Vividas».",
-      "grammar": "Lorsque + imparfait (j'avais) = cuando + tenía. Passé composé (j'ai vu) = vi (pretérito perfecto).",
+      "es": "Cuando tenía seis años vi, una vez, una magnífica imagen, en un libro sobre la Selva Virgen que se llamaba «Historias Vividas».",
+      "ipa": "/lɔʁskə ʒavɛ si‿z‿ɑ̃ ʒe vy yn fwa yn maɲifik imaʒ dɑ̃‿z‿œ̃ livʁ syʁ la fɔʁɛ vjɛʁʒ ki saplɛ istwaʁ veky/",
+      "grammar": {
+        "summary": "La frase establece un marco temporal en el pasado usando 'imparfait' (j'avais, s'appelait) para describir el contexto, y 'passé composé' (j'ai vu) para narrar una acción específica.",
+        "tense_focus": {
+          "tense": "Imparfait & Passé Composé",
+          "explanation": "El 'imparfait' (j'avais, s'appelait) describe el escenario: la edad y el nombre del libro. El 'passé composé' (j'ai vu) marca la acción principal y puntual."
+        },
+        "key_rules": [
+          {"rule": "Elisión", "detail": "j'avais, j'ai, s'appelait — 'je' y 'se' se contraen ante vocal. Es obligatoria en francés."},
+          {"rule": "Liaison", "detail": "six_ans → /si‿z‿ɑ̃/, dans_un → /dɑ̃‿z‿œ̃/. La 'x' y 's' se pronuncian /z/ antes de vocal."},
+          {"rule": "Alternancia tiempos narrativos", "detail": "Imparfait (fondo/descripción) + Passé Composé (acción/primer plano) es la estructura narrativa clásica del francés."}
+        ]
+      },
       "words": [
-        {"w": "Lorsque", "t": "Cuando", "p": "conjunción"},
-        {"w": "j'avais", "t": "yo tenía", "p": "verbo avoir, imparfait"},
-        {"w": "j'ai vu", "t": "vi", "p": "passé composé, voir"},
-        {"w": "une magnifique image", "t": "una magnífica lámina", "p": "sustantivo femenino"},
-        {"w": "un livre", "t": "un libro", "p": "sustantivo masculino"},
-        {"w": "la Forêt Vierge", "t": "la Selva Virgen", "p": "sustantivo femenino"}
-      ]
+        {"w": "Lorsque", "ipa": "/lɔʁskə/", "t": "Cuando", "pos": "conjunción", "detail": "Introduce cláusula temporal. Más formal que 'quand'. La 'e' final es muda."},
+        {"w": "j'avais", "ipa": "/ʒavɛ/", "t": "yo tenía", "pos": "verbo", "detail": "avoir, imparfait, 1ª sing. Describe estado en el pasado."},
+        {"w": "six", "ipa": "/sis/", "t": "seis", "pos": "numeral", "detail": "La 'x' es /s/ final, pero /z/ en liaison."},
+        {"w": "ans", "ipa": "/ɑ̃/", "t": "años", "pos": "sustantivo", "detail": "Masc. pl. Vocal nasal /ɑ̃/, no existe en español."},
+        {"w": "j'ai vu", "ipa": "/ʒe vy/", "t": "vi", "pos": "verbo", "detail": "voir, passé composé, 1ª sing. Acción puntual y terminada."},
+        {"w": "une", "ipa": "/yn/", "t": "una", "pos": "artículo", "detail": "Artículo indefinido femenino singular."},
+        {"w": "fois", "ipa": "/fwa/", "t": "vez", "pos": "sustantivo", "detail": "Femenino. La 's' final es muda."},
+        {"w": "magnifique", "ipa": "/maɲifik/", "t": "magnífica", "pos": "adjetivo", "detail": "Invariable en género (no 'magnifique' vs 'magnifique')."},
+        {"w": "image", "ipa": "/imaʒ/", "t": "imagen", "pos": "sustantivo", "detail": "Femenino. La 'e' final marca el género."},
+        {"w": "dans", "ipa": "/dɑ̃/", "t": "en", "pos": "preposición", "detail": "Preposición de lugar. Vocal nasal /ɑ̃/."},
+        {"w": "un", "ipa": "/œ̃/", "t": "un", "pos": "artículo", "detail": "Artículo indefinido masc. Vocal nasal /œ̃/."},
+        {"w": "livre", "ipa": "/livʁ/", "t": "libro", "pos": "sustantivo", "detail": "Masculino. Atención: 'une livre' = libra (fem.)."},
+        {"w": "sur", "ipa": "/syʁ/", "t": "sobre", "pos": "preposición", "detail": "Indica tema o ubicación."},
+        {"w": "la", "ipa": "/la/", "t": "la", "pos": "artículo", "detail": "Artículo definido femenino singular."},
+        {"w": "Forêt Vierge", "ipa": "/fɔʁɛ vjɛʁʒ/", "t": "Selva Virgen", "pos": "sustantivo propio", "detail": "Nombre compuesto. El acento circumflejo ^ indica una 's' histórica (forest)."},
+        {"w": "qui", "ipa": "/ki/", "t": "que", "pos": "pronombre relativo", "detail": "Funciona como sujeto del verbo siguiente."},
+        {"w": "s'appelait", "ipa": "/saplɛ/", "t": "se llamaba", "pos": "verbo", "detail": "s'appeler, imparfait, 3ª sing. Verbo pronominal."}
+      ],
+      "phonetics": {
+        "features": [
+          {"feature": "Liaison", "text": "six ans", "ipa": "/si‿z‿ɑ̃/", "explanation": "La 'x' de 'six' se sonoriza a /z/ ante vocal."},
+          {"feature": "Liaison", "text": "dans un", "ipa": "/dɑ̃‿z‿œ̃/", "explanation": "La 's' de 'dans' se sonoriza a /z/ ante vocal."},
+          {"feature": "Elisión", "text": "j'avais, j'ai, s'appelait", "explanation": "La vocal final de 'je' y 'se' se omite ante vocal."},
+          {"feature": "Nasales", "text": "ans, dans, un, magnifique", "explanation": "Vocales nasales /ɑ̃/, /œ̃/, /ɛ̃/ — no existen en español."}
+        ]
+      },
+      "contrast": "El francés distingue rigurosamente imparfait (fondo) de passé composé (acción). En español la elección entre imperfecto e indefinido puede ser más flexible. Las vocales nasales y las liaison no existen en español."
     },
     {
+      "idx": 1,
       "fr": "Ça représentait un serpent boa qui avalait un fauve.",
-      "es": "Representaba una serpiente boa que se tragaba a una fiera.",
-      "grammar": "Ça = eso (coloquial). Imparfait (représentait). 'qui' = que (pronombre relativo).",
+      "es": "Representaba una serpiente boa que se tragaba una fiera.",
+      "ipa": "/sa ʁəpʁezɑ̃tɛ œ̃ sɛʁpɑ̃ bɔa ki avalɛ œ̃ fov/",
+      "grammar": {
+        "summary": "Frase descriptiva simple: cláusula principal + relativa. Ambos verbos en 'imparfait' refuerzan la descripción de una escena estática en el pasado.",
+        "tense_focus": {
+          "tense": "Imparfait",
+          "explanation": "Ambos verbos (représentait, avalait) están en imparfait porque describen el contenido de la imagen — no narran una acción que avanza."
+        },
+        "key_rules": [
+          {"rule": "Pronombre 'Ça'", "detail": "Forma coloquial de 'cela' (eso). Muy frecuente en lenguaje hablado. Se refiere a la imagen."},
+          {"rule": "Cláusula relativa con 'qui'", "detail": "'qui avalait un fauve' modifica a 'serpent boa'. 'Qui' es sujeto del verbo."},
+          {"rule": "Desinencia -ait", "detail": "Terminación estándar de 3ª persona singular en imparfait."}
+        ]
+      },
       "words": [
-        {"w": "Ça", "t": "Eso", "p": "pronombre demostrativo"},
-        {"w": "représentait", "t": "representaba", "p": "imparfait, représenter"},
-        {"w": "un serpent boa", "t": "una serpiente boa", "p": "sustantivo masculino"},
-        {"w": "un fauve", "t": "una fiera", "p": "sustantivo masculino"}
-      ]
+        {"w": "Ça", "ipa": "/sa/", "t": "Eso", "pos": "pronombre", "detail": "Demostrativo neutro. 'ce+la' → 'cela' → 'ça'. Coloquial."},
+        {"w": "représentait", "ipa": "/ʁəpʁezɑ̃tɛ/", "t": "representaba", "pos": "verbo", "detail": "représenter, imparfait, 3ª sing. La 1ª 'e' es schwa /ə/."},
+        {"w": "un serpent boa", "ipa": "/œ̃ sɛʁpɑ̃ bɔa/", "t": "una serpiente boa", "pos": "sustantivo", "detail": "Masc. 'serpent' tiene nasal /ɑ̃/."},
+        {"w": "qui", "ipa": "/ki/", "t": "que", "pos": "pronombre relativo", "detail": "Sujeto de 'avalait'."},
+        {"w": "avalait", "ipa": "/avalɛ/", "t": "tragaba", "pos": "verbo", "detail": "avaler, imparfait, 3ª sing. Engullir/tragar."},
+        {"w": "fauve", "ipa": "/fov/", "t": "fiera", "pos": "sustantivo", "detail": "Masc. Animal salvaje. 'au' → /o/."}
+      ],
+      "phonetics": {
+        "features": [
+          {"feature": "Nasales", "text": "représentait, un, serpent", "explanation": "/ɑ̃/ y /œ̃/ — vocales nasales, pilar de la fonética francesa."},
+          {"feature": "E caduc (schwa)", "text": "représentait", "explanation": "La 1ª 'e' es /ə/, vocal neutra. En habla rápida puede omitirse."},
+          {"feature": "Diptongo 'au'", "text": "fauve", "explanation": "'au' siempre se pronuncia /o/ en francés (no /aw/ como en español)."}
+        ]
+      },
+      "contrast": "'Ça' es más coloquial que su equivalente 'eso'. La 'e' caduca (schwa) no existe en español. La 'au' francesa es /o/, no /aw/."
     },
     {
+      "idx": 2,
       "fr": "C'était la copie d'un tableau.",
       "es": "Era la copia de un cuadro.",
-      "grammar": "C'était = era (imparfait, être).",
+      "ipa": "/setɛ la kɔpi dœ̃ tablo/",
+      "grammar": {
+        "summary": "Oración atributiva simple con 'C'était' (presentador en pasado). Verbo en imparfait para describir una cualidad en el pasado.",
+        "tense_focus": {
+          "tense": "Imparfait (être)",
+          "explanation": "'était' describe un estado o identidad permanente en el pasado. No es una acción, sino una descripción."
+        },
+        "key_rules": [
+          {"rule": "Presentador 'C'est'/'C'était'", "detail": "Se usa para identificar o presentar algo. 'C'' es elisión de 'ce' + 'était'."},
+          {"rule": "Elisión 'd'un'", "detail": "'de' → 'd'' ante vocal. Contracción obligatoria para fluidez."},
+          {"rule": "Estructura 'copie d'un tableau'", "detail": "Sustantivo + 'de' + sustantivo indica posesión o relación. Muy común."}
+        ]
+      },
       "words": [
-        {"w": "C'était", "t": "Era", "p": "imparfait, être"},
-        {"w": "la copie", "t": "la copia", "p": "sustantivo femenino"},
-        {"w": "un tableau", "t": "un cuadro", "p": "sustantivo masculino"}
-      ]
+        {"w": "C'était", "ipa": "/setɛ/", "t": "Era", "pos": "pronombre + verbo", "detail": "'ce' + 'était'. Ce + être en imparfait. Presentador."},
+        {"w": "la", "ipa": "/la/", "t": "la", "pos": "artículo", "detail": "Artículo definido femenino singular."},
+        {"w": "copie", "ipa": "/kɔpi/", "t": "copia", "pos": "sustantivo", "detail": "Femenino."},
+        {"w": "d'un", "ipa": "/dœ̃/", "t": "de un", "pos": "prep. + artículo", "detail": "Elisión de 'de' + 'un'. Vocal nasal /œ̃/."},
+        {"w": "tableau", "ipa": "/tablo/", "t": "cuadro", "pos": "sustantivo", "detail": "Masc. 'eau' → /o/. Una de las reglas más consistentes del francés."}
+      ],
+      "phonetics": {
+        "features": [
+          {"feature": "Elisión", "text": "C'était, d'un", "explanation": "'ce' y 'de' se eliden ante vocal para evitar hiato."},
+          {"feature": "Triptongo 'eau'", "text": "tableau", "explanation": "'eau' siempre → /o/. Consistente en todo el francés."},
+          {"feature": "Vocal nasal", "text": "d'un", "explanation": "/œ̃/ — vocal nasal que no existe en español."}
+        ]
+      },
+      "contrast": "'C'était' es un presentador muy versátil que se traduce simplemente como 'Era'. La elisión de preposición ('d'un') no ocurre en español ('de un')."
     },
     {
+      "idx": 3,
       "fr": "Mon dessin ne représentait pas un chapeau. Il représentait un serpent boa qui digérait un éléphant.",
       "es": "Mi dibujo no representaba un sombrero. Representaba una serpiente boa que digería un elefante.",
-      "grammar": "Ne...pas = negación. Qui = que (relativo). Digérait = digería (imparfait).",
+      "ipa": "/mɔ̃ desɛ̃ nə ʁəpʁezɑ̃tɛ pɑ œ̃ ʃapo il ʁəpʁezɑ̃tɛ œ̃ sɛʁpɑ̃ bɔa ki diʒɛʁɛ œ̃‿n‿elefɑ̃/",
+      "grammar": {
+        "summary": "Dos oraciones: primera con negación 'ne...pas', segunda afirmativa corrigiendo la primera. Ambas en imparfait para describir el dibujo.",
+        "tense_focus": {
+          "tense": "Imparfait",
+          "explanation": "Todo está en imparfait porque se describe lo que el dibujo era y no era — un estado, no una acción."
+        },
+        "key_rules": [
+          {"rule": "Negación 'ne...pas'", "detail": "Rodea al verbo conjugado (ne représentait pas). 'ne' antes, 'pas' después. Es la estructura negativa estándar."},
+          {"rule": "Pronombre sujeto obligatorio", "detail": "El francés NO omite el sujeto. 'Il représentait' — el 'Il' es obligatorio aunque se sobreentienda."},
+          {"rule": "Adjetivo posesivo 'mon'", "detail": "'Mon' para masc. sing. ('dessin'). 'Ma' para fem. ('ma maison'). 'Mes' para plural."}
+        ]
+      },
       "words": [
-        {"w": "Mon dessin", "t": "Mi dibujo", "p": "posesivo + sustantivo"},
-        {"w": "ne...pas", "t": "no", "p": "negación"},
-        {"w": "un chapeau", "t": "un sombrero", "p": "sustantivo masculino"},
-        {"w": "un serpent boa", "t": "una serpiente boa", "p": "sustantivo masculino"},
-        {"w": "qui", "t": "que", "p": "pronombre relativo"},
-        {"w": "digérait", "t": "digería", "p": "imparfait, digérer"},
-        {"w": "un éléphant", "t": "un elefante", "p": "sustantivo masculino"}
-      ]
+        {"w": "Mon", "ipa": "/mɔ̃/", "t": "Mi", "pos": "adjetivo posesivo", "detail": "Masc. sing. Vocal nasal /ɔ̃/."},
+        {"w": "dessin", "ipa": "/desɛ̃/", "t": "dibujo", "pos": "sustantivo", "detail": "Masc. Vocal nasal /ɛ̃/."},
+        {"w": "ne...pas", "ipa": "/nə...pɑ/", "t": "no", "pos": "adverbio de negación", "detail": "Rodea al verbo conjugado. La 'ne' puede omitirse en oral, 'pas' no."},
+        {"w": "représentait", "ipa": "/ʁəpʁezɑ̃tɛ/", "t": "representaba", "pos": "verbo", "detail": "représenter, imparfait, 3ª sing."},
+        {"w": "chapeau", "ipa": "/ʃapo/", "t": "sombrero", "pos": "sustantivo", "detail": "Masc. 'ch' → /ʃ/ (como 'sh' inglesa). 'eau' → /o/."},
+        {"w": "Il", "ipa": "/il/", "t": "Él", "pos": "pronombre", "detail": "Sujeto obligatorio. Se refiere a 'mon dessin'."},
+        {"w": "digérait", "ipa": "/diʒɛʁɛ/", "t": "digería", "pos": "verbo", "detail": "digérer, imparfait, 3ª sing. El acento é → è en conjugación."},
+        {"w": "éléphant", "ipa": "/elefɑ̃/", "t": "elefante", "pos": "sustantivo", "detail": "Masc. La 'h' es muda en francés. Nasal /ɑ̃/."}
+      ],
+      "phonetics": {
+        "features": [
+          {"feature": "Liaison (opcional)", "text": "un éléphant", "ipa": "/œ̃‿n‿elefɑ̃/", "explanation": "La 'n' epentética aparece entre 'un' y vocal. Opcional pero común en lectura cuidada."},
+          {"feature": "Abundancia de nasales", "text": "Mon, dessin, un, serpent, éléphant", "explanation": "/ɔ̃/, /ɛ̃/, /ɑ̃/ — tres vocales nasales distintas, muy frecuentes en francés."},
+          {"feature": "Sonido 'ch'", "text": "chapeau", "explanation": "'ch' siempre → /ʃ/ (sh inglesa), no /tʃ/ (ch española)."}
+        ]
+      },
+      "contrast": "Negación 'ne...pas' vs español 'no'. La repetición del sujeto ('Il') es obligatoria en francés pero opcional en español (pro-drop)."
     },
     {
+      "idx": 4,
       "fr": "J'ai alors dessiné l'intérieur du serpent boa, afin que les grandes personnes puissent comprendre.",
       "es": "Dibujé entonces el interior de la serpiente boa, para que las personas mayores pudieran comprender.",
-      "grammar": "Passé composé (j'ai dessiné). Afin que + subjonctif (puissent). Du = de + le.",
+      "ipa": "/ʒe alɔʁ desine lɛ̃teʁjœʁ dy sɛʁpɑ̃ bɔa afɛ̃ kə le ɡʁɑ̃d pɛʁsɔn pɥis kɔ̃pʁɑ̃dʁ/",
+      "grammar": {
+        "summary": "Oración principal en 'passé composé' (j'ai dessiné) + cláusula de finalidad con 'afin que' que rige subjuntivo (puissent).",
+        "tense_focus": {
+          "tense": "Subjonctif Présent (puissent)",
+          "explanation": "'afin que' y 'pour que' siempre requieren subjuntivo. 'puissent' es pouvoir en subjonctif, 3ª pl."
+        },
+        "key_rules": [
+          {"rule": "Subjuntivo por finalidad", "detail": "'afin que' + subjonctif es obligatorio. La acción es un deseo/objetivo, no un hecho real."},
+          {"rule": "Artículo contracto 'du'", "detail": "'du' = 'de' + 'le'. Contracción obligatoria. No se dice 'de le'."},
+          {"rule": "Elisión", "detail": "'J'ai' (je+ai), 'l'intérieur' (le+intérieur). 'J' y 'l'' por vocal siguiente."}
+        ]
+      },
       "words": [
-        {"w": "alors", "t": "entonces", "p": "adverbio"},
-        {"w": "dessiné", "t": "dibujé", "p": "participe passé"},
-        {"w": "l'intérieur", "t": "el interior", "p": "sustantivo masculino"},
-        {"w": "du serpent", "t": "de la serpiente", "p": "artículo contracto"},
-        {"w": "afin que", "t": "para que", "p": "conjunción + subjonctif"},
-        {"w": "puissent", "t": "pudieran", "p": "subjonctif, pouvoir"}
-      ]
+        {"w": "J'ai dessiné", "ipa": "/ʒe desine/", "t": "Dibujé", "pos": "verbo", "detail": "dessiner, passé composé, 1ª sing. Acción concreta y terminada."},
+        {"w": "alors", "ipa": "/alɔʁ/", "t": "entonces", "pos": "adverbio", "detail": "Adverbio de tiempo o consecuencia."},
+        {"w": "l'intérieur", "ipa": "/lɛ̃teʁjœʁ/", "t": "el interior", "pos": "sustantivo", "detail": "Masc. Artículo elidido 'l''. Sonido /œʁ/."},
+        {"w": "du", "ipa": "/dy/", "t": "del", "pos": "artículo contracto", "detail": "'de' + 'le'. Vocal /y/ no existe en español."},
+        {"w": "serpent boa", "ipa": "/sɛʁpɑ̃ bɔa/", "t": "serpiente boa", "pos": "sustantivo", "detail": "Compuesto."},
+        {"w": "afin que", "ipa": "/afɛ̃ kə/", "t": "para que", "pos": "locución conjuntiva", "detail": "Requiere subjuntivo. 'afin que' es más formal que 'pour que'."},
+        {"w": "les grandes personnes", "ipa": "/le ɡʁɑ̃d pɛʁsɔn/", "t": "las personas mayores", "pos": "expresión", "detail": "Término infantil para 'adultos'. 'grandes' tiene /d/ de liaison."},
+        {"w": "puissent", "ipa": "/pɥis/", "t": "puedan", "pos": "verbo", "detail": "pouvoir, subjonctif présent, 3ª pl. '-ent' final es muda."},
+        {"w": "comprendre", "ipa": "/kɔ̃pʁɑ̃dʁ/", "t": "comprender", "pos": "verbo", "detail": "Infinitivo. Grupos consonánticos /pʁ/ y /dʁ/."}
+      ],
+      "phonetics": {
+        "features": [
+          {"feature": "Sonido /y/", "text": "du", "explanation": "Vocal anterior cerrada /y/, no existe en español (es la 'u' francesa)."},
+          {"feature": "Terminación -ent muda", "text": "puissent", "explanation": "La '-ent' de 3ª persona plural en verbos SIEMPRE es muda."},
+          {"feature": "Semivocal /ɥ/", "text": "puissent", "explanation": "Sonido labiopalatal /ɥ/ en /pɥis/. No existe en español."}
+        ]
+      },
+      "contrast": "El subjuntivo tras 'afin que' es similar al español. Las contracciones 'du'/'des' son obligatorias. Los sonidos /y/ y /ɥ/ son exclusivos del francés."
     },
     {
+      "idx": 5,
       "fr": "Elles ont besoin de toujours tout expliquer.",
-      "es": "Ellas necesitan que todo se les explique siempre.",
-      "grammar": "Avoir besoin de = necesitar. Toujours = siempre.",
+      "es": "Tienen la necesidad de explicarlo siempre todo.",
+      "ipa": "/ɛl zɔ̃ bəzwɛ̃ də tuʒuʁ tu‿t‿ɛksplike/",
+      "grammar": {
+        "summary": "Oración en presente de indicativo que expresa una verdad general. Usa la construcción idiomática 'avoir besoin de'.",
+        "tense_focus": {
+          "tense": "Présent de vérité générale",
+          "explanation": "El presente ('ont') expresa una característica atemporal de un grupo (los adultos). No hay acción, hay cualidad."
+        },
+        "key_rules": [
+          {"rule": "Expresión 'avoir besoin de'", "detail": "Significa 'necesitar'. Construcción con 'avoir' + 'besoin' + 'de' + infinitivo/sustantivo."},
+          {"rule": "Liaison obligatoria", "detail": "'Elles ont' → /ɛl zɔ̃/. Entre pronombre y verbo, es obligatoria."},
+          {"rule": "Colocación de adverbios", "detail": "'toujours' y 'tout' van entre 'de' y el infinitivo. Estructura fija."}
+        ]
+      },
       "words": [
-        {"w": "Elles", "t": "Ellas", "p": "pronombre femenino"},
-        {"w": "ont besoin de", "t": "necesitan", "p": "expresión avoir besoin de"},
-        {"w": "toujours", "t": "siempre", "p": "adverbio"},
-        {"w": "tout expliquer", "t": "explicar todo", "p": "pronombre + infinitivo"}
-      ]
+        {"w": "Elles", "ipa": "/ɛl/", "t": "Ellas", "pos": "pronombre", "detail": "Sujeto femenino plural. Se refiere a 'les grandes personnes'."},
+        {"w": "ont", "ipa": "/ɔ̃/", "t": "tienen", "pos": "verbo", "detail": "avoir, présent, 3ª pl. Vocal nasal /ɔ̃/."},
+        {"w": "besoin", "ipa": "/bəzwɛ̃/", "t": "necesidad", "pos": "sustantivo", "detail": "Masc. 'oi' → /wɛ̃/. Forma parte de 'avoir besoin de'."},
+        {"w": "de", "ipa": "/də/", "t": "de", "pos": "preposición", "detail": "Introduce el complemento de 'besoin'. Schwa /ə/."},
+        {"w": "toujours", "ipa": "/tuʒuʁ/", "t": "siempre", "pos": "adverbio", "detail": "'tous' + 'jours' = 'todos los días' → 'siempre'."},
+        {"w": "tout", "ipa": "/tu/", "t": "todo", "pos": "pronombre/adverbio", "detail": "Invariable aquí. La 't' final liaison con 'expliquer'."},
+        {"w": "expliquer", "ipa": "/ɛksplike/", "t": "explicar", "pos": "verbo", "detail": "Infinitivo. 'x' → /ks/."}
+      ],
+      "phonetics": {
+        "features": [
+          {"feature": "Liaison obligatoria", "text": "Elles ont", "ipa": "/ɛl zɔ̃/", "explanation": "La 's' de 'Elles' se sonoriza /z/ ante 'ont'."},
+          {"feature": "Liaison fija", "text": "tout expliquer", "ipa": "/tu‿t‿ɛksplike/", "explanation": "'tout' hace liaison con /t/ ante vocal."},
+          {"feature": "Semivocal /w/", "text": "besoin", "explanation": "'oi' → /wɛ̃/. 'w' semivocal + vocal nasal."}
+        ]
+      },
+      "contrast": "'Avoir besoin de' es idiomático vs 'necesitar' en español. Liaison /ɛl zɔ̃/ no existe en español. Colocación de adverbios más fija."
     },
     {
+      "idx": 6,
       "fr": "J'ai montré mon chef-d'œuvre aux grandes personnes et je leur ai demandé si mon dessin leur faisait peur.",
-      "es": "Enseñé mi obra maestra a las personas mayores y les pregunté si mi dibujo les daba miedo.",
-      "grammar": "Montré = enseñado (passé composé). Chef-d'œuvre = obra maestra. Aux = à+les. Leur = les (pronombre indirecto). Faisait peur = daba miedo.",
+      "es": "Mostré mi obra maestra a las personas mayores y les pregunté si mi dibujo les daba miedo.",
+      "ipa": "/ʒe mɔ̃tʁe mɔ̃ ʃɛdœvʁ o ɡʁɑ̃d pɛʁsɔn e ʒə lœʁ‿e dəmɑ̃de si mɔ̃ desɛ̃ lœʁ fəzɛ pœʁ/",
+      "grammar": {
+        "summary": "Dos cláusulas unidas por 'et', ambas en 'passé composé'. La segunda incluye pregunta indirecta con 'si' cuyo verbo está en 'imparfait' por concordancia temporal.",
+        "tense_focus": {
+          "tense": "Concordancia de tiempos (passé composé + imparfait)",
+          "explanation": "El verbo principal ('ai demandé') está en pasado, así que la subordinada ('si...faisait') debe ir en un tiempo pasado (imparfait). Es el 'discours indirect' (estilo indirecto)."
+        },
+        "key_rules": [
+          {"rule": "Artículo contracto 'aux'", "detail": "'aux' = 'à' + 'les'. Contracción obligatoria. Incorrecto: 'à les'."},
+          {"rule": "Pronombre OI 'leur'", "detail": "'leur' (a ellos/as) va SIEMPRE antes del verbo auxiliar: 'je leur ai demandé'."},
+          {"rule": "Pregunta indirecta con 'si'", "detail": "No hay inversión sujeto-verbo. 'Si' + sujeto + verbo, como en español."},
+          {"rule": "Expresión 'faire peur'", "detail": "Literalmente 'hacer miedo', se traduce 'dar miedo'. 'faire' se conjuga, 'peur' no cambia."}
+        ]
+      },
       "words": [
-        {"w": "chef-d'œuvre", "t": "obra maestra", "p": "sustantivo invariable"},
-        {"w": "aux grandes personnes", "t": "a las personas mayores", "p": "à + les"},
-        {"w": "je leur ai demandé", "t": "yo les pregunté", "p": "passé composé + pronombre indirecto"},
-        {"w": "faisait peur", "t": "daba miedo", "p": "expresión faire peur"}
-      ]
+        {"w": "J'ai montré", "ipa": "/ʒe mɔ̃tʁe/", "t": "Mostré", "pos": "verbo", "detail": "montrer, passé composé, 1ª sing."},
+        {"w": "mon", "ipa": "/mɔ̃/", "t": "mi", "pos": "adjetivo posesivo", "detail": "Masc. sing. Nasal /ɔ̃/."},
+        {"w": "chef-d'œuvre", "ipa": "/ʃɛdœvʁ/", "t": "obra maestra", "pos": "sustantivo compuesto", "detail": "Masc. Literalmente 'jefe-de-obra'. Invariable en plural (des chefs-d'œuvre)."},
+        {"w": "aux", "ipa": "/o/", "t": "a las", "pos": "artículo contracto", "detail": "'à' + 'les'. Suena /o/."},
+        {"w": "grandes personnes", "ipa": "/ɡʁɑ̃d pɛʁsɔn/", "t": "personas mayores", "pos": "expresión", "detail": "'grandes' → /ɡʁɑ̃d/ (liaison)."},
+        {"w": "et", "ipa": "/e/", "t": "y", "pos": "conjunción", "detail": "La 't' final es muda. No confundir con 'est' (es)."},
+        {"w": "je leur ai demandé", "ipa": "/ʒə lœʁ e dəmɑ̃de/", "t": "yo les pregunté", "pos": "verbo + pronombre", "detail": "'leur' es OI. Siempre antes del auxiliar."},
+        {"w": "si", "ipa": "/si/", "t": "si", "pos": "conjunción", "detail": "Introduce pregunta indirecta de sí/no."},
+        {"w": "faisait peur", "ipa": "/fəzɛ pœʁ/", "t": "daba miedo", "pos": "expresión", "detail": "'faire peur' en imparfait. 'faire' se conjuga irregularmente: /fəzɛ/."}
+      ],
+      "phonetics": {
+        "features": [
+          {"feature": "Sonido /œ/", "text": "chef-d'œuvre, leur, peur", "explanation": "Vocal /œ/ — no existe en español."},
+          {"feature": "'ai' excepcional", "text": "faisait", "explanation": "Aunque escrito 'ai', se pronuncia /fəzɛ/, no /fɛzɛ/. Excepción."},
+          {"feature": "Artículo contracto", "text": "aux", "explanation": "Se pronuncia simple /o/, como una vocal."}
+        ]
+      },
+      "contrast": "Colocación de 'leur' antes del auxiliar ('leur ai demandé') vs español ('les pregunté'). 'aux'/'du' contracciones obligatorias. 'faire peur' = 'dar miedo'."
     },
     {
+      "idx": 7,
       "fr": "Elles m'ont répondu : « Pourquoi un chapeau ferait-il peur ? »",
-      "es": "Me respondieron: «¿Por qué daría miedo un sombrero?»",
-      "grammar": "Ont répondu = respondieron (passé composé). Ferait-il = ¿daría? (condicional + inversión interrogativa).",
+      "es": "Me respondieron: «¿Por qué un sombrero daría miedo?»",
+      "ipa": "/ɛl mɔ̃ ʁepɔ̃dy puʁkwa œ̃ ʃapo fəʁɛtil pœʁ/",
+      "grammar": {
+        "summary": "Cláusula principal en 'passé composé' (Elles m'ont répondu) que introduce una cita directa. La pregunta dentro de la cita usa 'conditionnel présent' (ferait) con inversión formal sujeto-verbo (ferait-il).",
+        "tense_focus": {
+          "tense": "Conditionnel Présent",
+          "explanation": "'ferait' expresa una hipótesis o posibilidad atenuada. Equivale a 'daría' en español. Suaviza la pregunta, haciéndola más especulativa."
+        },
+        "key_rules": [
+          {"rule": "Inversión interrogativa formal", "detail": "'un chapeau ferait-il' → sujeto nominal + verbo conjugado + pronombre de repetición invertido. Es la forma más formal de pregunta."},
+          {"rule": "Inserción '-t-' eufónica", "detail": "'ferait-il' — cuando verbo termina en vocal y pronombre empieza por vocal, se inserta '-t-' para facilitar pronunciación."},
+          {"rule": "Estilo directo con guillemets", "detail": "Los « » (guillemets) son las comillas francesas. Se usan con espacio después de dos puntos."},
+          {"rule": "Pronombre OI elidido 'm''", "detail": "'m'ont répondu' = 'me' + 'ont répondu'. 'me' se elide ante vocal."}
+        ]
+      },
       "words": [
-        {"w": "m'ont répondu", "t": "me respondieron", "p": "passé composé, répondre"},
-        {"w": "Pourquoi", "t": "Por qué", "p": "adverbio interrogativo"},
-        {"w": "ferait-il peur", "t": "daría miedo", "p": "condicional + inversión + faire peur"}
-      ]
+        {"w": "Elles", "ipa": "/ɛl/", "t": "Ellas", "pos": "pronombre", "detail": "Sujeto femenino plural."},
+        {"w": "m'ont répondu", "ipa": "/mɔ̃ ʁepɔ̃dy/", "t": "me respondieron", "pos": "verbo", "detail": "répondre, passé composé, 3ª pl. Con pronombre OI elidido m'."},
+        {"w": "Pourquoi", "ipa": "/puʁkwa/", "t": "Por qué", "pos": "adverbio interrogativo", "detail": "Siempre una palabra. 'oi' → /wa/."},
+        {"w": "un", "ipa": "/œ̃/", "t": "un", "pos": "artículo", "detail": "Artículo indefinido masc. Vocal nasal /œ̃/."},
+        {"w": "chapeau", "ipa": "/ʃapo/", "t": "sombrero", "pos": "sustantivo", "detail": "Masc. 'ch' → /ʃ/, 'eau' → /o/."},
+        {"w": "ferait-il", "ipa": "/fəʁɛtil/", "t": "daría (él)", "pos": "verbo + pronombre", "detail": "faire, conditionnel présent. Inversión con -t- eufónica."},
+        {"w": "peur", "ipa": "/pœʁ/", "t": "miedo", "pos": "sustantivo", "detail": "Femenino. 'faire peur' = dar miedo."}
+      ],
+      "phonetics": {
+        "features": [
+          {"feature": "Inversión + -t- eufónica", "text": "ferait-il", "ipa": "/fəʁɛtil/", "explanation": "La 't' se pronuncia como parte de la inversión."},
+          {"feature": "Nasales múltiples", "text": "m'ont, répondu, un", "explanation": "/ɔ̃/ (ont) y /œ̃/ (un) — dos nasales diferentes."},
+          {"feature": "Sonido /ʁ/", "text": "répondu, pourquoi, ferait, peur", "explanation": "La 'r' uvular /ʁ/ aparece en casi todas las palabras clave."}
+        ]
+      },
+      "contrast": "La inversión interrogativa formal (sujeto + verbo + pronombre) es casi exclusiva del francés escrito/formal. En español solo se invierte verbo-sujeto. El condicional en ambos idiomas expresa hipótesis."
     }
   ]
 }

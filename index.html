@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lecteur — Lector bilingüe FR↔ES</title>
+  <title>Lecteur — Aprendizaje inmersivo FR↔ES</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #FAF8F5;
@@ -16,11 +16,19 @@
       --text-secondary: #6B6560;
       --accent: #8B5E3C;
       --accent-light: #D4A373;
+      --accent-bg: rgba(139,94,60,0.06);
+      --green: #4A7C59;
+      --green-bg: rgba(74,124,89,0.08);
+      --blue: #5A7C9E;
+      --blue-bg: rgba(90,124,158,0.08);
+      --red: #B85450;
+      --red-bg: rgba(184,84,80,0.08);
       --border: rgba(43,40,37,0.08);
-      --radius: 16px;
+      --radius: 12px;
       --shadow: 0 2px 8px rgba(43,40,37,0.06);
       --font-serif: 'IBM Plex Serif', Georgia, serif;
       --font-sans: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
     }
     html[data-theme="dark"] {
       --bg: #1C1C1E;
@@ -28,6 +36,13 @@
       --text: #E8E4DE;
       --text-secondary: #A09A94;
       --accent: #D4A373;
+      --accent-bg: rgba(212,163,115,0.08);
+      --green: #6BAF7B;
+      --green-bg: rgba(107,175,123,0.1);
+      --blue: #7BA3C9;
+      --blue-bg: rgba(123,163,201,0.1);
+      --red: #D47A76;
+      --red-bg: rgba(212,122,118,0.1);
       --border: rgba(232,228,222,0.08);
       --shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
@@ -42,20 +57,13 @@
     .screen { display: none; }
     .screen.active { display: block; animation: fadeIn 0.3s ease; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
     /* ─── Library ─── */
-    .app-header {
-      text-align: center; padding: 3rem 1rem 1.5rem;
-    }
-    .app-header h1 {
-      font-family: var(--font-serif); font-weight: 500;
-      font-size: 2rem; color: var(--accent);
-    }
+    .app-header { text-align: center; padding: 3rem 1rem 1.5rem; }
+    .app-header h1 { font-family: var(--font-serif); font-weight: 500; font-size: 2rem; color: var(--accent); }
     .subtitle { color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.3rem; }
-    .library-grid {
-      max-width: 800px; margin: 0 auto; padding: 0 1rem 3rem;
-      display: grid; gap: 1rem;
-    }
+    .library-grid { max-width: 800px; margin: 0 auto; padding: 0 1rem 3rem; display: grid; gap: 1rem; }
     .book-card {
       background: var(--bg-card); border-radius: var(--radius);
       padding: 1.25rem; cursor: pointer;
@@ -69,7 +77,7 @@
     .book-info p { color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.2rem; }
     .book-meta { font-size: 0.8rem; color: var(--accent); margin-top: 0.3rem; font-weight: 500; }
 
-    /* ─── Reader ─── */
+    /* ─── Reader Toolbar ─── */
     .reader-toolbar {
       display: flex; align-items: center; gap: 0.75rem;
       padding: 0.75rem 1rem;
@@ -77,18 +85,14 @@
       background: var(--bg-card);
       position: sticky; top: 0; z-index: 10;
     }
-    .btn-back {
-      background: none; border: none; font-size: 1.3rem;
-      cursor: pointer; color: var(--text); padding: 0.25rem 0.5rem;
-      border-radius: 8px;
-    }
+    .btn-back { background: none; border: none; font-size: 1.3rem; cursor: pointer; color: var(--text); padding: 0.25rem 0.5rem; border-radius: 8px; }
     .btn-back:hover { background: var(--border); }
     .reader-title { flex: 1; font-family: var(--font-serif); font-weight: 500; font-size: 1rem; }
-    .toolbar-right { display: flex; align-items: center; gap: 0.75rem; }
+    .toolbar-right { display: flex; align-items: center; gap: 0.5rem; }
     .btn-icon {
-      width: 40px; height: 40px; border-radius: 50%;
+      width: 36px; height: 36px; border-radius: 50%;
       border: 1px solid var(--border); background: var(--bg);
-      cursor: pointer; font-size: 1.1rem;
+      cursor: pointer; font-size: 1rem;
       display: flex; align-items: center; justify-content: center;
       transition: all 0.2s;
     }
@@ -96,20 +100,20 @@
     .btn-icon.active { background: var(--accent); color: white; border-color: var(--accent); }
     .chapter-label { font-size: 0.8rem; color: var(--text-secondary); }
 
-    .reader-container {
+    /* ─── Columns ─── */
+    .reader-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
-      min-height: calc(100vh - 60px);
     }
     @media (max-width: 720px) {
-      .reader-container { grid-template-columns: 1fr; }
+      .reader-layout { grid-template-columns: 1fr; }
     }
     .column {
-      padding: 1.5rem;
+      padding: 1rem 1.5rem;
       font-family: var(--font-serif);
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       line-height: 1.8;
     }
     .column-fr {
@@ -121,47 +125,241 @@
     }
     .line {
       cursor: pointer;
-      padding: 0.15rem 0.5rem;
+      padding: 0.2rem 0.5rem;
       border-radius: 6px;
       transition: all 0.2s;
       border-left: 3px solid transparent;
+      margin-bottom: 0.25rem;
     }
-    .line:hover { background: rgba(139,94,60,0.05); }
+    .line:hover { background: var(--accent-bg); }
     .line.active {
-      background: rgba(139,94,60,0.1);
+      background: var(--accent-bg);
       border-left-color: var(--accent);
     }
     .line.active.es { border-left-color: var(--accent-light); }
     .word {
       cursor: pointer;
-      border-bottom: 1px dashed rgba(139,94,60,0.3);
+      border-bottom: 1px dashed rgba(139,94,60,0.25);
       transition: all 0.15s;
       position: relative;
     }
     .word:hover {
-      background: var(--accent-light);
+      background: var(--accent);
       color: white;
       border-radius: 3px;
     }
-    .reader-footer {
-      max-width: 1000px; margin: 0 auto;
-      padding: 0.5rem 1.5rem 1rem;
+
+    /* ─── Info Panel ─── */
+    .info-panel {
+      max-width: 1100px; margin: 0 auto;
+      padding: 1rem 1.5rem 2rem;
+      animation: slideUp 0.25s ease;
     }
-    .word-tooltip {
+    .info-panel.hidden { display: none; }
+
+    .info-tabs {
+      display: flex; gap: 0.25rem;
+      margin-bottom: 0.75rem;
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 0.25rem;
+      border: 1px solid var(--border);
+      overflow-x: auto;
+    }
+    .info-tab {
+      padding: 0.5rem 1rem;
+      border: none; background: none;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      transition: all 0.2s;
+      white-space: nowrap;
+      font-family: var(--font-sans);
+    }
+    .info-tab:hover { color: var(--text); background: var(--accent-bg); }
+    .info-tab.active { background: var(--accent); color: white; }
+    .info-tab .tab-icon { margin-right: 0.35rem; }
+    .info-content { display: none; }
+    .info-content.active { display: block; animation: fadeIn 0.2s ease; }
+
+    /* ─── Grammar Content ─── */
+    .grammar-summary {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      padding: 0.75rem 1rem;
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    .tense-card {
+      background: var(--green-bg);
+      border: 1px solid var(--green);
+      border-radius: var(--radius);
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .tense-card .tense-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--green);
+      font-weight: 600;
+    }
+    .tense-card .tense-name {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text);
+      margin: 0.2rem 0 0.3rem;
+    }
+    .tense-card .tense-explanation {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .rules-list { display: grid; gap: 0.5rem; }
+    .rule-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.65rem 0.9rem;
+    }
+    .rule-item .rule-name {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
+    .rule-item .rule-detail {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 0.2rem;
+      line-height: 1.5;
+    }
+    .contrast-box {
+      margin-top: 0.75rem;
+      background: var(--blue-bg);
+      border: 1px solid var(--blue);
+      border-radius: var(--radius);
+      padding: 0.75rem 1rem;
+    }
+    .contrast-box .contrast-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--blue);
+      font-weight: 600;
+    }
+    .contrast-box .contrast-text {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-top: 0.2rem;
+      line-height: 1.5;
+    }
+
+    /* ─── IPA / Word Detail ─── */
+    .word-detail {
       display: none;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: var(--radius);
       padding: 0.75rem 1rem;
       box-shadow: 0 8px 24px rgba(0,0,0,0.12);
       font-size: 0.9rem;
-      max-width: 400px;
+      margin-bottom: 1rem;
+      animation: slideUp 0.2s ease;
     }
-    .word-tooltip.visible { display: block; animation: fadeIn 0.2s ease; }
-    .word-tooltip .wt-word { font-weight: 600; color: var(--accent); }
-    .word-tooltip .wt-trans { margin-top: 0.2rem; }
-    .word-tooltip .wt-pos { font-size: 0.8rem; color: var(--text-secondary); font-style: italic; }
-    .word-tooltip .wt-grammar { font-size: 0.85rem; color: var(--text-secondary); border-top: 1px solid var(--border); padding-top: 0.4rem; margin-top: 0.4rem; }
+    .word-detail.visible { display: block; }
+    .wd-header { display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; }
+    .wd-word { font-weight: 600; font-size: 1.1rem; color: var(--accent); font-family: var(--font-serif); }
+    .wd-ipa { font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-secondary); background: var(--accent-bg); padding: 0.1rem 0.4rem; border-radius: 4px; }
+    .wd-pos { font-size: 0.8rem; color: var(--text-secondary); font-style: italic; }
+    .wd-trans { margin-top: 0.3rem; font-size: 0.9rem; }
+    .wd-detail { font-size: 0.85rem; color: var(--text-secondary); border-top: 1px solid var(--border); padding-top: 0.5rem; margin-top: 0.5rem; line-height: 1.5; }
+    .wd-close {
+      float: right; background: none; border: none;
+      cursor: pointer; color: var(--text-secondary); font-size: 1.1rem;
+    }
+    .wd-close:hover { color: var(--text); }
+
+    /* ─── Phonetics ─── */
+    .phonetics-ipa {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .phonetics-ipa .ipa-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+    .phonetics-ipa .ipa-text {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      color: var(--accent);
+      margin-top: 0.3rem;
+      line-height: 1.6;
+      word-break: break-all;
+    }
+    .phonetics-list { display: grid; gap: 0.5rem; }
+    .phonetics-item {
+      background: var(--red-bg);
+      border: 1px solid var(--red);
+      border-radius: var(--radius);
+      padding: 0.6rem 0.9rem;
+    }
+    .phonetics-item .pf-feature {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--red);
+    }
+    .phonetics-item .pf-text {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text);
+      margin-top: 0.1rem;
+    }
+    .phonetics-item .pf-explanation {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 0.2rem;
+      line-height: 1.5;
+    }
+
+    /* ─── Words Table ─── */
+    .words-table {
+      display: grid; gap: 0.35rem;
+    }
+    .words-row {
+      display: grid;
+      grid-template-columns: 1fr 0.7fr 0.8fr 0.7fr;
+      gap: 0.5rem;
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .words-row:hover { background: var(--accent-bg); }
+    .words-row .w-w { font-weight: 500; font-family: var(--font-serif); }
+    .words-row .w-ipa { font-family: var(--font-mono); color: var(--accent); }
+    .words-row .w-t { color: var(--text-secondary); }
+    .words-row .w-pos { color: var(--text-secondary); font-style: italic; font-size: 0.8rem; }
+    .words-header {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-secondary);
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
 
     .theme-toggle {
       position: fixed; bottom: 1rem; right: 1rem;
@@ -171,14 +369,19 @@
       display: flex; align-items: center; justify-content: center;
       box-shadow: var(--shadow); z-index: 100;
     }
+    @media (max-width: 480px) {
+      .words-row { grid-template-columns: 1fr 0.6fr 0.8fr 0.6fr; font-size: 0.78rem; }
+      .column { padding: 0.75rem 1rem; font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
+
   <!-- Library Screen -->
   <div id="screen-library" class="screen active">
     <header class="app-header">
       <h1>📖 Lecteur</h1>
-      <p class="subtitle">Lector bilingüe · français ↔ español</p>
+      <p class="subtitle">Lectura inmersiva con gramática, fonética y pronunciación</p>
     </header>
     <div id="library-grid" class="library-grid"></div>
   </div>
@@ -189,16 +392,24 @@
       <button class="btn-back" onclick="showLibrary()">←</button>
       <span id="reader-title" class="reader-title"></span>
       <div class="toolbar-right">
-        <span class="chapter-label" id="chapter-label">Cap 1</span>
-        <button class="btn-icon" onclick="togglePlay()" id="btn-play" title="Reproducir/Detener">▶</button>
+        <span class="chapter-label" id="chapter-label"></span>
+        <button class="btn-icon" onclick="togglePlay()" id="btn-play" title="Reproducir (Espacio)">▶</button>
       </div>
     </div>
-    <div class="reader-container">
+    <div class="reader-layout">
       <div class="column column-fr" id="col-fr"></div>
       <div class="column column-es" id="col-es"></div>
     </div>
-    <div class="reader-footer">
-      <div id="word-tooltip" class="word-tooltip"></div>
+    <div id="word-detail" class="word-detail"></div>
+    <div class="info-panel" id="info-panel">
+      <div class="info-tabs" id="info-tabs">
+        <button class="info-tab active" data-tab="grammar" onclick="switchTab('grammar')"><span class="tab-icon">📝</span> Gramática</button>
+        <button class="info-tab" data-tab="phonetics" onclick="switchTab('phonetics')"><span class="tab-icon">🗣️</span> Fonética</button>
+        <button class="info-tab" data-tab="words" onclick="switchTab('words')"><span class="tab-icon">🔤</span> Palabras</button>
+      </div>
+      <div id="tab-grammar" class="info-content active"></div>
+      <div id="tab-phonetics" class="info-content"></div>
+      <div id="tab-words" class="info-content"></div>
     </div>
   </div>
 
@@ -206,7 +417,7 @@
 
   <script>
     // ─── Theme ───
-    const theme = localStorage.getItem('lecteur_theme') || 
+    const theme = localStorage.getItem('lecteur_theme') ||
       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', theme);
     document.getElementById('theme-btn').textContent = theme === 'dark' ? '☀️' : '🌙';
@@ -238,23 +449,18 @@
     let chapterData = null;
     let currentLine = 0;
     let isPlaying = false;
-    let audioCtx = null;
 
     // ─── Library ───
     const CATALOG = {
-      books: [
-        {
-          id: "le-petit-prince",
-          title: "Le Petit Prince",
-          author: "Antoine de Saint-Exupéry",
-          icon: "👑",
-          color: "#D4A373",
-          description: "El principito enseña lo esencial a los ojos del corazón.",
-          chapters: [
-            { num: 1, title: "Chapitre 1" }
-          ]
-        }
-      ]
+      books: [{
+        id: "le-petit-prince",
+        title: "Le Petit Prince",
+        author: "Antoine de Saint-Exupéry",
+        icon: "👑",
+        color: "#D4A373",
+        description: "El principito enseña lo esencial a los ojos del corazón.",
+        chapters: [{ num: 1, title: "Chapitre 1" }]
+      }]
     };
 
     function renderLibrary() {
@@ -265,7 +471,7 @@
           <div class="book-info">
             <h3>${b.title}</h3>
             <p>${b.description}</p>
-            <div class="book-meta">${b.author} · ${b.chapters.length} capítulos · ${b.id === 'le-petit-prince' ? 'FR → ES' : ''}</div>
+            <div class="book-meta">${b.author} · ${b.chapters.length} capítulos · FR → ES</div>
           </div>
         </div>
       `).join('');
@@ -274,7 +480,6 @@
     async function openBook(bookId) {
       currentBook = CATALOG.books.find(b => b.id === bookId);
       if (!currentBook) return;
-      // Load chapter 1
       await loadChapter(1);
       showScreen('screen-reader');
     }
@@ -285,8 +490,15 @@
       currentChapter = num;
       currentLine = 0;
       renderChapter();
-      document.getElementById('reader-title').textContent = currentBook.title;
+      showLineInfo(0);
+      document.getElementById('reader-title').textContent = `${currentBook.title}`;
       document.getElementById('chapter-label').textContent = chapterData.title;
+    }
+
+    function escHtml(s) {
+      const d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
     }
 
     function renderChapter() {
@@ -295,66 +507,149 @@
       if (!chapterData || !chapterData.lines) return;
 
       colFr.innerHTML = chapterData.lines.map((l, i) => {
-        const words = l.words ? l.words.map(w => 
-          `<span class="word" data-word="${w.w}" data-trans="${w.t}" data-pos="${w.p || ''}" onclick="showWordTip(event, this)">${w.w}</span>`
-        ).join(' ') : l.fr;
+        const words = l.words ? l.words.map(w =>
+          `<span class="word" data-idx="${i}" data-w="${escHtml(w.w)}" data-ipa="${escHtml(w.ipa||'')}" data-t="${escHtml(w.t)}" data-pos="${escHtml(w.pos||'')}" data-detail="${escHtml(w.detail||'')}" onclick="showWordDetail(event, this)">${escHtml(w.w)}</span>`
+        ).join(' ') : escHtml(l.fr);
         return `<div class="line ${i === currentLine ? 'active' : ''}" data-idx="${i}" onclick="goToLine(${i})">${words}</div>`;
       }).join('');
 
-      colEs.innerHTML = chapterData.lines.map((l, i) => 
-        `<div class="line es ${i === currentLine ? 'active' : ''}" data-idx="${i}">${l.es}</div>`
+      colEs.innerHTML = chapterData.lines.map((l, i) =>
+        `<div class="line es ${i === currentLine ? 'active' : ''}" data-idx="${i}" onclick="goToLine(${i})">${escHtml(l.es)}</div>`
       ).join('');
     }
 
     function goToLine(idx) {
       document.querySelectorAll('.line').forEach(l => l.classList.remove('active'));
       currentLine = idx;
-      const lines = document.querySelectorAll(`.line[data-idx="${idx}"]`);
-      lines.forEach(l => l.classList.add('active'));
-      lines[0]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      hideWordTip();
+      document.querySelectorAll(`.line[data-idx="${idx}"]`).forEach(l => l.classList.add('active'));
+      document.querySelector(`.line[data-idx="${idx}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      hideWordDetail();
+      showLineInfo(idx);
     }
 
-    function showWordTip(event, el) {
+    // ─── Word Detail ───
+    function showWordDetail(event, el) {
       event.stopPropagation();
-      const word = el.dataset.word;
-      const trans = el.dataset.trans;
-      const pos = el.dataset.pos || '';
-      const tip = document.getElementById('word-tooltip');
-
-      // Also show grammar from the current line if available
-      let grammar = '';
-      if (chapterData && chapterData.lines && chapterData.lines[currentLine]) {
-        grammar = chapterData.lines[currentLine].grammar || '';
-      }
-
-      tip.innerHTML = `
-        <div class="wt-word">${word}</div>
-        <div class="wt-trans">→ ${trans}</div>
-        ${pos ? `<div class="wt-pos">${pos}</div>` : ''}
-        ${grammar ? `<div class="wt-grammar">📝 ${grammar}</div>` : ''}
+      const w = el.dataset.w;
+      const ipa = el.dataset.ipa;
+      const t = el.dataset.t;
+      const pos = el.dataset.pos;
+      const detail = el.dataset.detail;
+      const panel = document.getElementById('word-detail');
+      panel.innerHTML = `
+        <button class="wd-close" onclick="hideWordDetail()">✕</button>
+        <div class="wd-header">
+          <span class="wd-word">${escHtml(w)}</span>
+          ${ipa ? `<span class="wd-ipa">${escHtml(ipa)}</span>` : ''}
+          ${pos ? `<span class="wd-pos">${escHtml(pos)}</span>` : ''}
+        </div>
+        <div class="wd-trans">→ ${escHtml(t)}</div>
+        ${detail ? `<div class="wd-detail">${escHtml(detail)}</div>` : ''}
       `;
-      tip.classList.add('visible');
+      panel.classList.add('visible');
     }
 
-    function hideWordTip() {
-      document.getElementById('word-tooltip').classList.remove('visible');
+    function hideWordDetail() {
+      document.getElementById('word-detail').classList.remove('visible');
     }
     document.addEventListener('click', (e) => {
-      if (!e.target.closest('.word')) hideWordTip();
+      if (!e.target.closest('.word') && !e.target.closest('.word-detail')) hideWordDetail();
     });
+
+    // ─── Info Panel ───
+    function showLineInfo(idx) {
+      const line = chapterData?.lines?.[idx];
+      if (!line) return;
+      renderGrammar(idx);
+      renderPhonetics(idx);
+      renderWords(idx);
+      switchTab('grammar');
+    }
+
+    function renderGrammar(idx) {
+      const line = chapterData.lines[idx];
+      const g = line.grammar;
+      if (!g) {
+        document.getElementById('tab-grammar').innerHTML = '<p style="color:var(--text-secondary);font-size:0.9rem">Sin análisis gramatical disponible.</p>';
+        return;
+      }
+      let rulesHtml = '';
+      if (g.key_rules && g.key_rules.length) {
+        rulesHtml = `<div class="rules-list">${g.key_rules.map(r =>
+          `<div class="rule-item"><div class="rule-name">${escHtml(r.rule)}</div><div class="rule-detail">${escHtml(r.detail)}</div></div>`
+        ).join('')}</div>`;
+      }
+      let tenseHtml = '';
+      if (g.tense_focus) {
+        tenseHtml = `<div class="tense-card"><div class="tense-label">⚡ Tiempo verbal clave</div><div class="tense-name">${escHtml(g.tense_focus.tense)}</div><div class="tense-explanation">${escHtml(g.tense_focus.explanation)}</div></div>`;
+      }
+      let contrastHtml = '';
+      if (line.contrast) {
+        contrastHtml = `<div class="contrast-box"><div class="contrast-label">🌎 Contraste con español</div><div class="contrast-text">${escHtml(line.contrast)}</div></div>`;
+      }
+      document.getElementById('tab-grammar').innerHTML = `
+        <div class="grammar-summary">${escHtml(g.summary)}</div>
+        ${tenseHtml}
+        ${rulesHtml}
+        ${contrastHtml}
+      `;
+    }
+
+    function renderPhonetics(idx) {
+      const line = chapterData.lines[idx];
+      const ph = line.phonetics;
+      const ipaSentence = line.ipa;
+
+      let ipaHtml = '';
+      if (ipaSentence) {
+        ipaHtml = `<div class="phonetics-ipa"><div class="ipa-label">🔊 Transcripción IPA</div><div class="ipa-text">${escHtml(ipaSentence)}</div></div>`;
+      }
+      let featuresHtml = '';
+      if (ph && ph.features && ph.features.length) {
+        featuresHtml = `<div class="phonetics-list">${ph.features.map(f =>
+          `<div class="phonetics-item">
+            <div class="pf-feature">${escHtml(f.feature)}</div>
+            <div class="pf-text">${escHtml(f.text || '')} ${f.ipa ? escHtml(f.ipa) : ''}</div>
+            <div class="pf-explanation">${escHtml(f.explanation)}</div>
+          </div>`
+        ).join('')}</div>`;
+      }
+      document.getElementById('tab-phonetics').innerHTML = ipaHtml + featuresHtml || '<p style="color:var(--text-secondary);font-size:0.9rem">Sin análisis fonético disponible.</p>';
+    }
+
+    function renderWords(idx) {
+      const line = chapterData.lines[idx];
+      if (!line.words || !line.words.length) {
+        document.getElementById('tab-words').innerHTML = '<p style="color:var(--text-secondary);font-size:0.9rem">Sin desglose de palabras disponible.</p>';
+        return;
+      }
+      document.getElementById('tab-words').innerHTML = `
+        <div class="words-header" style="display:grid;grid-template-columns:1fr 0.7fr 0.8fr 0.7fr;gap:0.5rem;padding:0.4rem 0.6rem;">
+          <span>Palabra</span><span>IPA</span><span>Traducción</span><span>Función</span>
+        </div>
+        <div class="words-table">${line.words.map(w =>
+          `<div class="words-row">
+            <span class="w-w">${escHtml(w.w)}</span>
+            <span class="w-ipa">${escHtml(w.ipa || '')}</span>
+            <span class="w-t">${escHtml(w.t)}</span>
+            <span class="w-pos">${escHtml(w.pos || '')}</span>
+          </div>`
+        ).join('')}</div>
+      `;
+    }
+
+    function switchTab(tab) {
+      document.querySelectorAll('.info-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.info-content').forEach(t => t.classList.remove('active'));
+      document.querySelector(`.info-tab[data-tab="${tab}"]`).classList.add('active');
+      document.getElementById(`tab-${tab}`).classList.add('active');
+    }
 
     // ─── Keyboard Navigation ───
     document.addEventListener('keydown', (e) => {
       if (!document.getElementById('screen-reader').classList.contains('active')) return;
-      if (e.key === 'ArrowUp') {
-        e.preventDefault();
-        if (currentLine > 0) goToLine(currentLine - 1);
-      }
-      if (e.key === 'ArrowDown') {
-        e.preventDefault();
-        if (chapterData && currentLine < chapterData.lines.length - 1) goToLine(currentLine + 1);
-      }
+      if (e.key === 'ArrowUp') { e.preventDefault(); if (currentLine > 0) goToLine(currentLine - 1); }
+      if (e.key === 'ArrowDown') { e.preventDefault(); if (chapterData && currentLine < chapterData.lines.length - 1) goToLine(currentLine + 1); }
       if (e.key === ' ') { e.preventDefault(); togglePlay(); }
     });
 
@@ -375,23 +670,21 @@
       utterance.lang = 'fr-FR';
       utterance.rate = 0.85;
 
-      // Try to find a French voice
       const voices = window.speechSynthesis.getVoices();
       const frVoice = voices.find(v => v.lang.startsWith('fr'));
       if (frVoice) utterance.voice = frVoice;
 
-      utterance.onend = () => {
+      const playNext = () => {
         if (currentLine < chapterData.lines.length - 1 && isPlaying) {
           goToLine(currentLine + 1);
-          // Continue playing next line
-          const nextLine = chapterData.lines[currentLine];
-          const nextUtterance = new SpeechSynthesisUtterance(nextLine.fr);
-          nextUtterance.lang = 'fr-FR';
-          nextUtterance.rate = 0.85;
-          if (frVoice) nextUtterance.voice = frVoice;
-          nextUtterance.onend = arguments.callee;
-          window.speechSynthesis.speak(nextUtterance);
-          utterance = nextUtterance;
+          const nl = chapterData.lines[currentLine];
+          const nu = new SpeechSynthesisUtterance(nl.fr);
+          nu.lang = 'fr-FR';
+          nu.rate = 0.85;
+          if (frVoice) nu.voice = frVoice;
+          nu.onend = playNext;
+          window.speechSynthesis.speak(nu);
+          utterance = nu;
         } else {
           isPlaying = false;
           document.getElementById('btn-play').textContent = '▶';
@@ -399,11 +692,15 @@
         }
       };
 
+      utterance.onend = playNext;
       window.speechSynthesis.speak(utterance);
       isPlaying = true;
       document.getElementById('btn-play').textContent = '⏸';
       document.getElementById('btn-play').classList.add('active');
     }
+
+    // Preload voices
+    window.speechSynthesis.getVoices();
 
     // ─── Init ───
     renderLibrary();
