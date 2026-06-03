@@ -1,0 +1,100 @@
+{
+  "book": "le-petit-prince",
+  "chapter": 1,
+  "title": "Chapitre 1",
+  "lines": [
+    {
+      "fr": "Lorsque j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre sur la Forêt Vierge qui s'appelait « Histoires Vécues ».",
+      "es": "Cuando tenía seis años, vi una vez una magnífica lámina en un libro sobre la Selva Virgen que se llamaba «Historias Vividas».",
+      "grammar": "Lorsque + imparfait (j'avais) = cuando + tenía. Passé composé (j'ai vu) = vi (pretérito perfecto).",
+      "words": [
+        {"w": "Lorsque", "t": "Cuando", "p": "conjunción"},
+        {"w": "j'avais", "t": "yo tenía", "p": "verbo avoir, imparfait"},
+        {"w": "j'ai vu", "t": "vi", "p": "passé composé, voir"},
+        {"w": "une magnifique image", "t": "una magnífica lámina", "p": "sustantivo femenino"},
+        {"w": "un livre", "t": "un libro", "p": "sustantivo masculino"},
+        {"w": "la Forêt Vierge", "t": "la Selva Virgen", "p": "sustantivo femenino"}
+      ]
+    },
+    {
+      "fr": "Ça représentait un serpent boa qui avalait un fauve.",
+      "es": "Representaba una serpiente boa que se tragaba a una fiera.",
+      "grammar": "Ça = eso (coloquial). Imparfait (représentait). 'qui' = que (pronombre relativo).",
+      "words": [
+        {"w": "Ça", "t": "Eso", "p": "pronombre demostrativo"},
+        {"w": "représentait", "t": "representaba", "p": "imparfait, représenter"},
+        {"w": "un serpent boa", "t": "una serpiente boa", "p": "sustantivo masculino"},
+        {"w": "un fauve", "t": "una fiera", "p": "sustantivo masculino"}
+      ]
+    },
+    {
+      "fr": "C'était la copie d'un tableau.",
+      "es": "Era la copia de un cuadro.",
+      "grammar": "C'était = era (imparfait, être).",
+      "words": [
+        {"w": "C'était", "t": "Era", "p": "imparfait, être"},
+        {"w": "la copie", "t": "la copia", "p": "sustantivo femenino"},
+        {"w": "un tableau", "t": "un cuadro", "p": "sustantivo masculino"}
+      ]
+    },
+    {
+      "fr": "Mon dessin ne représentait pas un chapeau. Il représentait un serpent boa qui digérait un éléphant.",
+      "es": "Mi dibujo no representaba un sombrero. Representaba una serpiente boa que digería un elefante.",
+      "grammar": "Ne...pas = negación. Qui = que (relativo). Digérait = digería (imparfait).",
+      "words": [
+        {"w": "Mon dessin", "t": "Mi dibujo", "p": "posesivo + sustantivo"},
+        {"w": "ne...pas", "t": "no", "p": "negación"},
+        {"w": "un chapeau", "t": "un sombrero", "p": "sustantivo masculino"},
+        {"w": "un serpent boa", "t": "una serpiente boa", "p": "sustantivo masculino"},
+        {"w": "qui", "t": "que", "p": "pronombre relativo"},
+        {"w": "digérait", "t": "digería", "p": "imparfait, digérer"},
+        {"w": "un éléphant", "t": "un elefante", "p": "sustantivo masculino"}
+      ]
+    },
+    {
+      "fr": "J'ai alors dessiné l'intérieur du serpent boa, afin que les grandes personnes puissent comprendre.",
+      "es": "Dibujé entonces el interior de la serpiente boa, para que las personas mayores pudieran comprender.",
+      "grammar": "Passé composé (j'ai dessiné). Afin que + subjonctif (puissent). Du = de + le.",
+      "words": [
+        {"w": "alors", "t": "entonces", "p": "adverbio"},
+        {"w": "dessiné", "t": "dibujé", "p": "participe passé"},
+        {"w": "l'intérieur", "t": "el interior", "p": "sustantivo masculino"},
+        {"w": "du serpent", "t": "de la serpiente", "p": "artículo contracto"},
+        {"w": "afin que", "t": "para que", "p": "conjunción + subjonctif"},
+        {"w": "puissent", "t": "pudieran", "p": "subjonctif, pouvoir"}
+      ]
+    },
+    {
+      "fr": "Elles ont besoin de toujours tout expliquer.",
+      "es": "Ellas necesitan que todo se les explique siempre.",
+      "grammar": "Avoir besoin de = necesitar. Toujours = siempre.",
+      "words": [
+        {"w": "Elles", "t": "Ellas", "p": "pronombre femenino"},
+        {"w": "ont besoin de", "t": "necesitan", "p": "expresión avoir besoin de"},
+        {"w": "toujours", "t": "siempre", "p": "adverbio"},
+        {"w": "tout expliquer", "t": "explicar todo", "p": "pronombre + infinitivo"}
+      ]
+    },
+    {
+      "fr": "J'ai montré mon chef-d'œuvre aux grandes personnes et je leur ai demandé si mon dessin leur faisait peur.",
+      "es": "Enseñé mi obra maestra a las personas mayores y les pregunté si mi dibujo les daba miedo.",
+      "grammar": "Montré = enseñado (passé composé). Chef-d'œuvre = obra maestra. Aux = à+les. Leur = les (pronombre indirecto). Faisait peur = daba miedo.",
+      "words": [
+        {"w": "chef-d'œuvre", "t": "obra maestra", "p": "sustantivo invariable"},
+        {"w": "aux grandes personnes", "t": "a las personas mayores", "p": "à + les"},
+        {"w": "je leur ai demandé", "t": "yo les pregunté", "p": "passé composé + pronombre indirecto"},
+        {"w": "faisait peur", "t": "daba miedo", "p": "expresión faire peur"}
+      ]
+    },
+    {
+      "fr": "Elles m'ont répondu : « Pourquoi un chapeau ferait-il peur ? »",
+      "es": "Me respondieron: «¿Por qué daría miedo un sombrero?»",
+      "grammar": "Ont répondu = respondieron (passé composé). Ferait-il = ¿daría? (condicional + inversión interrogativa).",
+      "words": [
+        {"w": "m'ont répondu", "t": "me respondieron", "p": "passé composé, répondre"},
+        {"w": "Pourquoi", "t": "Por qué", "p": "adverbio interrogativo"},
+        {"w": "ferait-il peur", "t": "daría miedo", "p": "condicional + inversión + faire peur"}
+      ]
+    }
+  ]
+}

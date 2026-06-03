@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecteur — Lector bilingüe FR↔ES</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* TODO: Codex will fill in styles */
+  </style>
+</head>
+<body>
+  <!-- Screen: Library -->
+  <div id="screen-library" class="screen active">
+    <header class="app-header">
+      <h1>📖 Lecteur</h1>
+      <p class="subtitle">Lector bilingüe · français ↔ español</p>
+    </header>
+    <div id="library-grid" class="library-grid"></div>
+  </div>
+
+  <!-- Screen: Reader -->
+  <div id="screen-reader" class="screen">
+    <div class="reader-toolbar">
+      <button class="btn-back" onclick="showLibrary()">←</button>
+      <span id="reader-title" class="reader-title"></span>
+      <div class="toolbar-right">
+        <button id="btn-play" class="btn-icon" onclick="togglePlay()" title="Reproducir/Detener">▶</button>
+        <span id="progress-chapter" class="chapter-label">Capítulo 1</span>
+      </div>
+    </div>
+    <div class="reader-container">
+      <div class="column column-fr" id="col-fr">
+        <!-- French text rendered by JS -->
+      </div>
+      <div class="column column-es" id="col-es">
+        <!-- Spanish text rendered by JS -->
+      </div>
+    </div>
+    <div class="reader-footer">
+      <div id="word-tooltip" class="word-tooltip hidden"></div>
+    </div>
+  </div>
+
+  <script>
+    // TODO: Codex will fill in the JS
+  </script>
+</body>
+</html>

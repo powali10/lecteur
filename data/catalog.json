@@ -1,0 +1,22 @@
+{
+  "books": [
+    {
+      "id": "le-petit-prince",
+      "title": "Le Petit Prince",
+      "author": "Antoine de Saint-Exupéry",
+      "lang": "fr",
+      "translation": "es",
+      "icon": "👑",
+      "color": "#D4A373",
+      "description": "Un piloto perdido en el desierto conoce a un pequeño príncipe que le enseña lo esencial.",
+      "chapters": [
+        {
+          "num": 1,
+          "title": "Chapitre 1",
+          "audio": "audio/le-petit-prince/ch01.mp3",
+          "duration": 45.2
+        }
+      ]
+    }
+  ]
+}
