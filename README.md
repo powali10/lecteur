@@ -14,9 +14,16 @@ Construido para Fer. Lee, escucha y aprende fránces con libros reales.
 ## Stack
 
 - HTML + CSS + JS puro (sin frameworks)
-- GitHub Pages para hosting
-- Edge TTS para audio (generado, no streaming)
-- Gemini/GLM para alineación de frases y notas gramaticales
+- GitHub Pages para hosting → [https://powali10.github.io/lecteur/](https://powali10.github.io/lecteur/)
+- Web Speech API (TTS nativo del navegador, voz francesa)
+- Datos alineados FR-ES con anotaciones gramaticales por frase
+
+## Próximo
+
+- [ ] Más libros (L'Étranger, Weil, etc.)
+- [ ] Audio sincronizado con Edge TTS 
+- [ ] Generación de alineación con Gemini/GLM
+- [ ] Soporte para múltiples idiomas
 
 ## Licencia
 
