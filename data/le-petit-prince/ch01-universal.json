@@ -1,0 +1,2271 @@
+{
+  "book_metadata": {
+    "title": "le-petit-prince",
+    "chapter": 1,
+    "chapter_title": "Chapitre 1",
+    "source_language": "fr",
+    "target_language": "es",
+    "schema_version": "1.0",
+    "processing_date": "2026-06-03T12:29:15Z"
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "fr": "Lorsque j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre sur la Forêt Vierge qui s'appelait « Histoires Vécues ».",
+      "es": "Cuando tenía seis años vi, una vez, una magnífica imagen, en un libro sobre la Selva Virgen que se llamaba «Historias Vividas».",
+      "ipa": "/lɔʁskə ʒavaː si zɑ̃ ʒe vy yn fwa yn maɲifik imaʒ dɑ̃ zœ̃ livʁ syʁ la fɔʁe vjɛʁʒ ki sapəlɛ istwaʁ veky/",
+      "grammar": {
+        "summary": "Esta frase utiliza el imparfait para describir una acción habitual o un estado del pasado ('j'avais', 's'appelait') y el passé composé para una acción puntual que ocurrió en el pasado ('j'ai vu'). La estructura de la oración es compleja, con múltiples cláusulas que describen el momento y el objeto de la acción.",
+        "tense_focus": {
+          "tense": "Imparfait y Passé Composé",
+          "explanation": "El imparfait ('j'avais', 's'appelait') se usa para describir el contexto de la acción (la edad del narrador y el nombre del libro), mientras que el passé composé ('j'ai vu') se usa para la acción principal y puntual del pasado."
+        },
+        "key_rules": [
+          {
+            "rule": "Uso de 'lorsque'",
+            "detail": "'Lorsque' (cuando) introduce una cláusula temporal, similar a 'quand', pero a menudo se percibe como más formal y se prefiere cuando no le sigue una vocal o una 'h' muda."
+          },
+          {
+            "rule": "Concordancia de género y número",
+            "detail": "El adjetivo 'magnifique' precede al sustantivo 'image' y concuerda en género (femenino) y número (singular). 'Vierge' concuerda con 'Forêt'."
+          },
+          {
+            "rule": "Voz Pasiva con pronominal",
+            "detail": "'qui s'appelait' es una forma de voz pasiva pronominal, muy común en francés para decir 'que se llamaba'."
+          }
+        ]
+      },
+      "words": [
+        {
+          "w": "Lorsque",
+          "ipa": "/lɔʁskə/",
+          "t": "Cuando",
+          "pos": "conjunción",
+          "lemma": "lorsque",
+          "detail": "Introduce una cláusula temporal.",
+          "dict": [
+            {
+              "traduccion": "cuando",
+              "pos": "conjunción"
+            }
+          ]
+        },
+        {
+          "w": "j'avais",
+          "ipa": "/ʒavaː/",
+          "t": "tenía",
+          "pos": "verbo",
+          "lemma": "avoir",
+          "detail": "Imparfait de 'avoir', primera persona del singular.",
+          "dict": [
+            {
+              "traduccion": "depósito",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "haber",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "haber",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "avoir",
+          "part_passé": {
+            "masc_sg": "eu",
+            "fem_sg": "eus",
+            "masc_pl": "eue",
+            "fem_pl": "eues"
+          }
+        },
+        {
+          "w": "six",
+          "ipa": "/si/",
+          "t": "seis",
+          "pos": "adjetivo numeral",
+          "lemma": "six",
+          "detail": "Número.",
+          "dict": [
+            {
+              "traduccion": "seis",
+              "pos": "adjetivo"
+            },
+            {
+              "traduccion": "seis",
+              "pos": "numeral"
+            },
+            {
+              "traduccion": "seiscientos",
+              "pos": "numeral"
+            }
+          ]
+        },
+        {
+          "w": "ans",
+          "ipa": "/zɑ̃/",
+          "t": "años",
+          "pos": "sustantivo",
+          "lemma": "an",
+          "detail": "Plural de 'an'.",
+          "dict": [
+            {
+              "traduccion": "año",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "j'ai vu",
+          "ipa": "/ʒe vy/",
+          "t": "vi",
+          "pos": "verbo",
+          "lemma": "voir",
+          "detail": "Passé composé de 'voir', primera persona del singular.",
+          "dict": [
+            {
+              "traduccion": "ver",
+              "pos": "verbo"
+            },
+            {
+              "traduccion": "ver",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "voir",
+          "part_passé": {
+            "masc_sg": "vu",
+            "fem_sg": "vus",
+            "masc_pl": "vue",
+            "fem_pl": "vues"
+          }
+        },
+        {
+          "w": "une",
+          "ipa": "/yn/",
+          "t": "una",
+          "pos": "artículo indefinido",
+          "lemma": "un",
+          "detail": "Femenino singular.",
+          "dict": [
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "masculino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "numeral"
+            }
+          ]
+        },
+        {
+          "w": "fois",
+          "ipa": "/fwa/",
+          "t": "vez",
+          "pos": "sustantivo",
+          "lemma": "fois",
+          "detail": "Indica repetición o un momento en el tiempo.",
+          "dict": [
+            {
+              "traduccion": "vez",
+              "pos": "sustantivo",
+              "genero": "femenino",
+              "numero": "sing_plural"
+            },
+            {
+              "traduccion": "vez",
+              "pos": "sustantivo",
+              "genero": "femenino",
+              "numero": "sing_plural"
+            },
+            {
+              "traduccion": "vez",
+              "pos": "sustantivo",
+              "genero": "femenino",
+              "numero": "sing_plural"
+            }
+          ]
+        },
+        {
+          "w": "une",
+          "ipa": "/yn/",
+          "t": "una",
+          "pos": "artículo indefinido",
+          "lemma": "un",
+          "detail": "Femenino singular.",
+          "dict": [
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "masculino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "numeral"
+            }
+          ]
+        },
+        {
+          "w": "magnifique",
+          "ipa": "/maɲifik/",
+          "t": "magnífica",
+          "pos": "adjetivo",
+          "lemma": "magnifique",
+          "detail": "Describe una cualidad, es invariable en género.",
+          "dict": [
+            {
+              "traduccion": "estupendo",
+              "pos": "adjetivo",
+              "genero": "masculino_femenino"
+            },
+            {
+              "traduccion": "magnífico",
+              "pos": "adjetivo",
+              "genero": "masculino_femenino"
+            },
+            {
+              "traduccion": "estupendo",
+              "pos": "adjetivo",
+              "genero": "masculino_femenino"
+            }
+          ]
+        },
+        {
+          "w": "image",
+          "ipa": "/imaʒ/",
+          "t": "imagen",
+          "pos": "sustantivo",
+          "lemma": "image",
+          "detail": "Femenino singular.",
+          "dict": [
+            {
+              "traduccion": "imagen",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "dans",
+          "ipa": "/dɑ̃/",
+          "t": "en",
+          "pos": "preposición",
+          "lemma": "dans",
+          "detail": "Indica ubicación.",
+          "dict": [
+            {
+              "traduccion": "en",
+              "pos": "preposición"
+            },
+            {
+              "traduccion": "en",
+              "pos": "preposición"
+            },
+            {
+              "traduccion": "en",
+              "pos": "adverbio"
+            }
+          ]
+        },
+        {
+          "w": "un",
+          "ipa": "/œ̃/",
+          "t": "un",
+          "pos": "artículo indefinido",
+          "lemma": "un",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "masculino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "numeral"
+            }
+          ]
+        },
+        {
+          "w": "livre",
+          "ipa": "/livʁ/",
+          "t": "libro",
+          "pos": "sustantivo",
+          "lemma": "livre",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "libro",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "libro",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "libro",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "sur",
+          "ipa": "/syʁ/",
+          "t": "sobre",
+          "pos": "preposición",
+          "lemma": "sur",
+          "detail": "Indica el tema o la superficie.",
+          "dict": [
+            {
+              "traduccion": "sobre",
+              "pos": "preposición"
+            },
+            {
+              "traduccion": "acerca",
+              "pos": "preposición"
+            },
+            {
+              "traduccion": "acerca",
+              "pos": "preposición"
+            }
+          ]
+        },
+        {
+          "w": "la",
+          "ipa": "/la/",
+          "t": "la",
+          "pos": "artículo definido",
+          "lemma": "la",
+          "detail": "Femenino singular.",
+          "dict": [
+            {
+              "traduccion": "culpa",
+              "pos": "preposición"
+            },
+            {
+              "traduccion": "Ezker",
+              "pos": "nombre_propio"
+            },
+            {
+              "traduccion": "por",
+              "pos": "adverbio"
+            }
+          ]
+        },
+        {
+          "w": "Forêt",
+          "ipa": "/fɔʁe/",
+          "t": "Selva",
+          "pos": "sustantivo",
+          "lemma": "forêt",
+          "detail": "Femenino singular.",
+          "dict": [
+            {
+              "traduccion": "selva",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "bosque",
+              "pos": "sustantivo",
+              "genero": "femenino"
+            },
+            {
+              "traduccion": "selva",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "Vierge",
+          "ipa": "/vjɛʁʒ/",
+          "t": "Virgen",
+          "pos": "adjetivo",
+          "lemma": "vierge",
+          "detail": "Describe una cualidad, concuerda con 'Forêt'.",
+          "dict": [
+            {
+              "traduccion": "virgen",
+              "pos": "adjetivo"
+            },
+            {
+              "traduccion": "virgen",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "virgo",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "qui",
+          "ipa": "/ki/",
+          "t": "que",
+          "pos": "pronombre relativo",
+          "lemma": "qui",
+          "detail": "Introduce una cláusula subordinada y es sujeto.",
+          "dict": [
+            {
+              "traduccion": "quién",
+              "pos": "interrogativo",
+              "genero": "masculino_femenino",
+              "numero": "sing_plural"
+            },
+            {
+              "traduccion": "que",
+              "pos": "relativo"
+            },
+            {
+              "traduccion": "quien",
+              "pos": "relativo",
+              "genero": "masculino_femenino",
+              "numero": "sing_plural"
+            }
+          ]
+        },
+        {
+          "w": "s'appelait",
+          "ipa": "/sapəlɛ/",
+          "t": "se llamaba",
+          "pos": "verbo",
+          "lemma": "s'appeler",
+          "detail": "Imparfait de 's'appeler', tercera persona del singular."
+        },
+        {
+          "w": "«",
+          "ipa": "//",
+          "t": "«",
+          "pos": "puntuación",
+          "lemma": "puntuación",
+          "detail": "Comillas."
+        },
+        {
+          "w": "Histoires",
+          "ipa": "/istwaʁ/",
+          "t": "Historias",
+          "pos": "sustantivo",
+          "lemma": "histoire",
+          "detail": "Femenino plural.",
+          "dict": [
+            {
+              "traduccion": "historia",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "Vécues",
+          "ipa": "/veky/",
+          "t": "Vividas",
+          "pos": "adjetivo",
+          "lemma": "vécu",
+          "detail": "Participio pasado de 'vivre' usado como adjetivo, concuerda con 'Histoires'."
+        },
+        {
+          "w": "»",
+          "ipa": "//",
+          "t": "»",
+          "pos": "puntuación",
+          "lemma": "puntuación",
+          "detail": "Comillas."
+        }
+      ],
+      "phonetics": {
+        "features": [
+          {
+            "feature": "liaison",
+            "text": "six ans",
+            "explanation": "La 'x' de 'six' se pronuncia /z/ al hacer la liaison con 'ans'."
+          },
+          {
+            "feature": "liaison",
+            "text": "dans un",
+            "explanation": "La 's' de 'dans' se pronuncia /z/ al hacer la liaison con 'un'."
+          }
+        ]
+      },
+      "contrast": "En español, 'cuando' es directamente equivalente a 'lorsque'. El uso del imperfecto ('tenía', 'se llamaba') y el pretérito indefinido ('vi') es muy similar ('passé composé' para acción puntual, 'imparfait' para describir el contexto). 'Forêt Vierge' se traduce como 'Selva Virgen', donde 'selva' es más común en este contexto que 'bosque'."
+    },
+    {
+      "idx": 1,
+      "fr": "Ça représentait un serpent boa qui avalait un fauve.",
+      "es": "Representaba una serpiente boa que se tragaba una fiera.",
+      "ipa": "/sa ʁəpʁezɑ̃tɛ tœ̃ sɛʁpɑ̃ bɔa ki avalɛ tœ̃ fov/",
+      "grammar": {
+        "summary": "Esta frase utiliza el imparfait para describir una escena o una acción en progreso en el pasado ('représentait', 'avalait'). El pronombre demostrativo 'ça' es una forma coloquial de 'cela' y actúa como sujeto.",
+        "tense_focus": {
+          "tense": "Imparfait",
+          "explanation": "El imparfait se usa para describir una acción o estado que era habitual o continuo en el pasado, o para describir el escenario de un evento pasado. Aquí, describe lo que la imagen representaba."
+        },
+        "key_rules": [
+          {
+            "rule": "Uso de 'ça'",
+            "detail": "'Ça' es una forma coloquial común de 'cela' (eso) y puede ser sujeto de una oración."
+          },
+          {
+            "rule": "Pronombre relativo 'qui'",
+            "detail": "'Qui' introduce una cláusula subordinada y actúa como sujeto del verbo 'avalait'."
+          }
+        ]
+      },
+      "words": [
+        {
+          "w": "Ça",
+          "ipa": "/sa/",
+          "t": "Esto/Eso",
+          "pos": "pronombre demostrativo",
+          "lemma": "ça",
+          "detail": "Forma coloquial de 'cela'.",
+          "dict": [
+            {
+              "traduccion": "esto",
+              "pos": "pronombre"
+            }
+          ]
+        },
+        {
+          "w": "représentait",
+          "ipa": "/ʁəpʁezɑ̃tɛ/",
+          "t": "representaba",
+          "pos": "verbo",
+          "lemma": "représenter",
+          "detail": "Imparfait de 'représenter', tercera persona del singular.",
+          "dict": [
+            {
+              "traduccion": "representar",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "représenter",
+          "part_passé": {
+            "masc_sg": "représenté",
+            "fem_sg": "représentés",
+            "masc_pl": "représentée",
+            "fem_pl": "représentées"
+          }
+        },
+        {
+          "w": "un",
+          "ipa": "/œ̃/",
+          "t": "un",
+          "pos": "artículo indefinido",
+          "lemma": "un",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "masculino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "numeral"
+            }
+          ]
+        },
+        {
+          "w": "serpent",
+          "ipa": "/sɛʁpɑ̃/",
+          "t": "serpiente",
+          "pos": "sustantivo",
+          "lemma": "serpent",
+          "detail": "Masculino singular. A pesar de ser masculino en francés, se refiere al mismo concepto que el femenino 'serpiente' en español.",
+          "dict": [
+            {
+              "traduccion": "serpiente",
+              "pos": "sustantivo",
+              "genero": "masculino"
+            }
+          ]
+        },
+        {
+          "w": "boa",
+          "ipa": "/bɔa/",
+          "t": "boa",
+          "pos": "sustantivo",
+          "lemma": "boa",
+          "detail": "Masculino singular, se une a 'serpent' para formar 'serpent boa'."
+        },
+        {
+          "w": "qui",
+          "ipa": "/ki/",
+          "t": "que",
+          "pos": "pronombre relativo",
+          "lemma": "qui",
+          "detail": "Introduce una cláusula subordinada y es sujeto.",
+          "dict": [
+            {
+              "traduccion": "quién",
+              "pos": "interrogativo",
+              "genero": "masculino_femenino",
+              "numero": "sing_plural"
+            },
+            {
+              "traduccion": "que",
+              "pos": "relativo"
+            },
+            {
+              "traduccion": "quien",
+              "pos": "relativo",
+              "genero": "masculino_femenino",
+              "numero": "sing_plural"
+            }
+          ]
+        },
+        {
+          "w": "avalait",
+          "ipa": "/avalɛ/",
+          "t": "tragaba",
+          "pos": "verbo",
+          "lemma": "avaler",
+          "detail": "Imparfait de 'avaler', tercera persona del singular.",
+          "conj_ref": "avaler",
+          "part_passé": {
+            "masc_sg": "avalé",
+            "fem_sg": "avalés",
+            "masc_pl": "avalée",
+            "fem_pl": "avalées"
+          }
+        },
+        {
+          "w": "un",
+          "ipa": "/œ̃/",
+          "t": "una",
+          "pos": "artículo indefinido",
+          "lemma": "un",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "masculino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "numeral"
+            }
+          ]
+        },
+        {
+          "w": "fauve",
+          "ipa": "/fov/",
+          "t": "fiera",
+          "pos": "sustantivo",
+          "lemma": "fauve",
+          "detail": "Masculino singular, se refiere a un animal salvaje."
+        }
+      ],
+      "phonetics": {
+        "features": [
+          {
+            "feature": "elision",
+            "text": "ça représentait",
+            "explanation": "No hay elisión aquí, pero 'ça' es un pronombre tónico."
+          }
+        ]
+      },
+      "contrast": "El uso del imparfait en francés ('représentait', 'avalait') se corresponde directamente con el imperfecto en español ('representaba', 'tragaba') para describir una acción continua o una escena en el pasado. La traducción de 'serpent' (masculino en francés) a 'serpiente' (femenino en español) es interesante. 'Fauve' se traduce bien a 'fiera' o 'bestia salvaje'."
+    },
+    {
+      "idx": 2,
+      "fr": "C'était la copie d'un tableau.",
+      "es": "Era la copia de un cuadro.",
+      "ipa": "/setɛ la kɔpi dœ̃ tablo/",
+      "grammar": {
+        "summary": "Esta frase simple usa el imparfait del verbo 'être' para describir una característica o estado en el pasado. La preposición 'de' (aquí, 'd'un') indica posesión o relación.",
+        "tense_focus": {
+          "tense": "Imparfait",
+          "explanation": "El imparfait ('c'était') se usa para describir una situación o una cualidad duradera en el pasado, no una acción puntual."
+        },
+        "key_rules": [
+          {
+            "rule": "Elisión de 'ce était'",
+            "detail": "'C'était' es la contracción y elisión de 'ce était' (era/estaba), una forma muy común para descripciones en pasado."
+          },
+          {
+            "rule": "Contracción 'd'un'",
+            "detail": "La preposición 'de' cambia a 'd'' ante un artículo que comienza con vocal, como 'un'."
+          }
+        ]
+      },
+      "words": [
+        {
+          "w": "C'était",
+          "ipa": "/setɛ/",
+          "t": "Era",
+          "pos": "verbo",
+          "lemma": "être",
+          "detail": "Imparfait de 'être', tercera persona del singular, con el pronombre demostrativo 'ce' elidido.",
+          "dict": [
+            {
+              "traduccion": "ser",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "ser",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "estar",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "être",
+          "part_passé": {
+            "masc_sg": "été",
+            "fem_sg": "",
+            "masc_pl": "",
+            "fem_pl": ""
+          }
+        },
+        {
+          "w": "la",
+          "ipa": "/la/",
+          "t": "la",
+          "pos": "artículo definido",
+          "lemma": "la",
+          "detail": "Femenino singular.",
+          "dict": [
+            {
+              "traduccion": "culpa",
+              "pos": "preposición"
+            },
+            {
+              "traduccion": "Ezker",
+              "pos": "nombre_propio"
+            },
+            {
+              "traduccion": "por",
+              "pos": "adverbio"
+            }
+          ]
+        },
+        {
+          "w": "copie",
+          "ipa": "/kɔpi/",
+          "t": "copia",
+          "pos": "sustantivo",
+          "lemma": "copie",
+          "detail": "Femenino singular.",
+          "dict": [
+            {
+              "traduccion": "copia",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "d'un",
+          "ipa": "/dœ̃/",
+          "t": "de un",
+          "pos": "preposición + artículo",
+          "lemma": "de + un",
+          "detail": "Contracción de 'de' y 'un'."
+        },
+        {
+          "w": "tableau",
+          "ipa": "/tablo/",
+          "t": "cuadro",
+          "pos": "sustantivo",
+          "lemma": "tableau",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "cuadro",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "tablón",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "pizarra",
+              "pos": "sustantivo",
+              "genero": "masculino"
+            }
+          ]
+        }
+      ],
+      "phonetics": {
+        "features": [
+          {
+            "feature": "elision",
+            "text": "C'était",
+            "explanation": "Elisión de 'e' en 'ce' antes de 'était'."
+          },
+          {
+            "feature": "elision",
+            "text": "d'un",
+            "explanation": "Elisión de 'e' en 'de' antes de 'un'."
+          }
+        ]
+      },
+      "contrast": "El uso del imperfecto 'era' en español coincide perfectamente con 'c'était' en francés para describir. La estructura 'la copia de un cuadro' es idéntica a 'la copie d'un tableau'."
+    },
+    {
+      "idx": 3,
+      "fr": "Mon dessin ne représentait pas un chapeau. Il représentait un serpent boa qui digérait un éléphant.",
+      "es": "Mi dibujo no representaba un sombrero. Representaba una serpiente boa que digería un elefante.",
+      "ipa": "/mɔ̃ desɛ̃ nə ʁəpʁezɑ̃tɛ pa zœ̃ ʃapo il ʁəpʁezɑ̃tɛ tœ̃ sɛʁpɑ̃ bɔa ki diʒɛʁɛ tœ̃ neləfɑ̃/",
+      "grammar": {
+        "summary": "Esta frase utiliza el imparfait para describir lo que no era y lo que sí era el dibujo. La negación se construye con 'ne...pas'. 'Qui' introduce una cláusula relativa que describe la acción del serpent boa.",
+        "tense_focus": {
+          "tense": "Imparfait",
+          "explanation": "El imparfait ('représentait', 'digérait') se usa para describir el contenido del dibujo como un estado continuo o una característica en el pasado."
+        },
+        "key_rules": [
+          {
+            "rule": "Negación 'ne...pas'",
+            "detail": "La forma estándar de negación en francés envuelve el verbo con 'ne' y 'pas'."
+          },
+          {
+            "rule": "Pronombre posesivo 'mon'",
+            "detail": "'Mon' (mi) concuerda en género (masculino) y número (singular) con 'dessin'."
+          },
+          {
+            "rule": "Pronombre relativo 'qui'",
+            "detail": "'Qui' introduce una cláusula que describe al sujeto anterior ('un serpent boa') y es sujeto de 'digérait'."
+          }
+        ]
+      },
+      "words": [
+        {
+          "w": "Mon",
+          "ipa": "/mɔ̃/",
+          "t": "Mi",
+          "pos": "adjetivo posesivo",
+          "lemma": "mon",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "mío",
+              "pos": "posesivo",
+              "genero": "masculino_femenino",
+              "numero": "plural"
+            },
+            {
+              "traduccion": "mío",
+              "pos": "posesivo",
+              "genero": "femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "mío",
+              "pos": "posesivo",
+              "genero": "masculino",
+              "numero": "singular"
+            }
+          ]
+        },
+        {
+          "w": "dessin",
+          "ipa": "/desɛ̃/",
+          "t": "dibujo",
+          "pos": "sustantivo",
+          "lemma": "dessin",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "dibujo",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "ne",
+          "ipa": "/nə/",
+          "t": "no",
+          "pos": "adverbio de negación",
+          "lemma": "ne",
+          "detail": "Primera parte de la negación 'ne...pas'.",
+          "dict": [
+            {
+              "traduccion": "no",
+              "pos": "adverbio"
+            }
+          ]
+        },
+        {
+          "w": "représentait",
+          "ipa": "/ʁəpʁezɑ̃tɛ/",
+          "t": "representaba",
+          "pos": "verbo",
+          "lemma": "représenter",
+          "detail": "Imparfait de 'représenter', tercera persona del singular.",
+          "dict": [
+            {
+              "traduccion": "representar",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "représenter",
+          "part_passé": {
+            "masc_sg": "représenté",
+            "fem_sg": "représentés",
+            "masc_pl": "représentée",
+            "fem_pl": "représentées"
+          }
+        },
+        {
+          "w": "pas",
+          "ipa": "/pa/",
+          "t": "no",
+          "pos": "adverbio de negación",
+          "lemma": "pas",
+          "detail": "Segunda parte de la negación 'ne...pas'.",
+          "dict": [
+            {
+              "traduccion": "pas",
+              "pos": "adverbio"
+            },
+            {
+              "traduccion": "paso",
+              "pos": "sustantivo",
+              "genero": "masculino",
+              "numero": "sing_plural"
+            },
+            {
+              "traduccion": "paso",
+              "pos": "sustantivo",
+              "genero": "masculino",
+              "numero": "sing_plural"
+            }
+          ]
+        },
+        {
+          "w": "un",
+          "ipa": "/œ̃/",
+          "t": "un",
+          "pos": "artículo indefinido",
+          "lemma": "un",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "masculino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "numeral"
+            }
+          ]
+        },
+        {
+          "w": "chapeau",
+          "ipa": "/ʃapo/",
+          "t": "sombrero",
+          "pos": "sustantivo",
+          "lemma": "chapeau",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "sombrero",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "Il",
+          "ipa": "/il/",
+          "t": "Él",
+          "pos": "pronombre personal",
+          "lemma": "il",
+          "detail": "Pronombre sujeto, tercera persona del singular masculino, refiriéndose a 'Mon dessin'.",
+          "dict": [
+            {
+              "traduccion": "él",
+              "pos": "pronombre"
+            },
+            {
+              "traduccion": "Tintoretto",
+              "pos": "nombre_propio"
+            },
+            {
+              "traduccion": "no",
+              "pos": "conjunción"
+            }
+          ]
+        },
+        {
+          "w": "représentait",
+          "ipa": "/ʁəpʁezɑ̃tɛ/",
+          "t": "representaba",
+          "pos": "verbo",
+          "lemma": "représenter",
+          "detail": "Imparfait de 'représenter', tercera persona del singular.",
+          "dict": [
+            {
+              "traduccion": "representar",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "représenter",
+          "part_passé": {
+            "masc_sg": "représenté",
+            "fem_sg": "représentés",
+            "masc_pl": "représentée",
+            "fem_pl": "représentées"
+          }
+        },
+        {
+          "w": "un",
+          "ipa": "/œ̃/",
+          "t": "una",
+          "pos": "artículo indefinido",
+          "lemma": "un",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "masculino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "numeral"
+            }
+          ]
+        },
+        {
+          "w": "serpent",
+          "ipa": "/sɛʁpɑ̃/",
+          "t": "serpiente",
+          "pos": "sustantivo",
+          "lemma": "serpent",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "serpiente",
+              "pos": "sustantivo",
+              "genero": "masculino"
+            }
+          ]
+        },
+        {
+          "w": "boa",
+          "ipa": "/bɔa/",
+          "t": "boa",
+          "pos": "sustantivo",
+          "lemma": "boa",
+          "detail": "Masculino singular."
+        },
+        {
+          "w": "qui",
+          "ipa": "/ki/",
+          "t": "que",
+          "pos": "pronombre relativo",
+          "lemma": "qui",
+          "detail": "Introduce una cláusula subordinada y es sujeto.",
+          "dict": [
+            {
+              "traduccion": "quién",
+              "pos": "interrogativo",
+              "genero": "masculino_femenino",
+              "numero": "sing_plural"
+            },
+            {
+              "traduccion": "que",
+              "pos": "relativo"
+            },
+            {
+              "traduccion": "quien",
+              "pos": "relativo",
+              "genero": "masculino_femenino",
+              "numero": "sing_plural"
+            }
+          ]
+        },
+        {
+          "w": "digérait",
+          "ipa": "/diʒɛʁɛ/",
+          "t": "digería",
+          "pos": "verbo",
+          "lemma": "digérer",
+          "detail": "Imparfait de 'digérer', tercera persona del singular.",
+          "conj_ref": "digérer",
+          "part_passé": {
+            "masc_sg": "digéré",
+            "fem_sg": "digérés",
+            "masc_pl": "digérée",
+            "fem_pl": "digérées"
+          }
+        },
+        {
+          "w": "un",
+          "ipa": "/œ̃/",
+          "t": "un",
+          "pos": "artículo indefinido",
+          "lemma": "un",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "masculino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "numeral"
+            }
+          ]
+        },
+        {
+          "w": "éléphant",
+          "ipa": "/eləfɑ̃/",
+          "t": "elefante",
+          "pos": "sustantivo",
+          "lemma": "éléphant",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "elefante",
+              "pos": "sustantivo"
+            }
+          ]
+        }
+      ],
+      "phonetics": {
+        "features": [
+          {
+            "feature": "liaison",
+            "text": "pas un",
+            "explanation": "La 's' de 'pas' no se pronuncia normalmente, pero aquí se nota una ligera /z/ en 'pas un chapeau' en habla rápida, aunque no es obligatoria. Similar para 'digérait un'."
+          }
+        ]
+      },
+      "contrast": "El uso del imparfait en francés ('représentait', 'digérait') es idéntico al imperfecto en español ('representaba', 'digería'). La negación 'ne...pas' es el equivalente de 'no' antes del verbo en español. 'Mon dessin' se traduce a 'Mi dibujo', con 'mon' siendo el adjetivo posesivo."
+    },
+    {
+      "idx": 4,
+      "fr": "J'ai alors dessiné l'intérieur du serpent boa, afin que les grandes personnes puissent comprendre.",
+      "es": "Dibujé entonces el interior de la serpiente boa, para que las personas mayores pudieran comprender.",
+      "ipa": "/ʒe alɔʁ desine lɛ̃teʁjœʁ dy sɛʁpɑ̃ bɔa afɛ̃ kə le ɡʁɑ̃d pɛʁsɔn pɥis kɔ̃pʁɑ̃dʁ/",
+      "grammar": {
+        "summary": "Esta frase utiliza el passé composé para una acción puntual en el pasado ('j'ai dessiné'). La construcción 'afin que' introduce una cláusula de propósito, que requiere el uso del subjonctif ('puissent').",
+        "tense_focus": {
+          "tense": "Passé Composé y Subjonctif",
+          "explanation": "El passé composé ('j'ai dessiné') se usa para la acción principal y completada en el pasado. El subjonctif ('puissent') es requerido por la conjunción de propósito 'afin que' para expresar el deseo o la finalidad."
+        },
+        "key_rules": [
+          {
+            "rule": "Passé Composé",
+            "detail": "Formado con el auxiliar 'avoir' en presente y el participio pasado del verbo."
+          },
+          {
+            "rule": "Uso de 'afin que'",
+            "detail": "'Afin que' (para que) es una conjunción de propósito que siempre rige el subjonctif."
+          },
+          {
+            "rule": "Contracción 'du'",
+            "detail": "'Du' es la contracción de la preposición 'de' y el artículo definido 'le'."
+          }
+        ]
+      },
+      "words": [
+        {
+          "w": "J'ai dessiné",
+          "ipa": "/ʒe desine/",
+          "t": "Dibujé",
+          "pos": "verbo",
+          "lemma": "dessiner",
+          "detail": "Passé composé de 'dessiner', primera persona del singular.",
+          "dict": [
+            {
+              "traduccion": "dibujar",
+              "pos": "verbo"
+            },
+            {
+              "traduccion": "diseñar",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "dessiner",
+          "part_passé": {
+            "masc_sg": "dessiné",
+            "fem_sg": "dessinés",
+            "masc_pl": "dessinée",
+            "fem_pl": "dessinées"
+          }
+        },
+        {
+          "w": "alors",
+          "ipa": "/alɔʁ/",
+          "t": "entonces",
+          "pos": "adverbio",
+          "lemma": "alors",
+          "detail": "Indica el momento o la consecuencia.",
+          "dict": [
+            {
+              "traduccion": "entonces",
+              "pos": "adverbio"
+            },
+            {
+              "traduccion": "entonces",
+              "pos": "conjunción"
+            },
+            {
+              "traduccion": "mientras",
+              "pos": "conjunción"
+            }
+          ]
+        },
+        {
+          "w": "l'intérieur",
+          "ipa": "/lɛ̃teʁjœʁ/",
+          "t": "el interior",
+          "pos": "sustantivo",
+          "lemma": "intérieur",
+          "detail": "Masculino singular, con el artículo definido 'le' elidido.",
+          "dict": [
+            {
+              "traduccion": "interior",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "interior",
+              "pos": "adjetivo",
+              "genero": "femenino"
+            },
+            {
+              "traduccion": "interior",
+              "pos": "adjetivo",
+              "genero": "masculino"
+            }
+          ]
+        },
+        {
+          "w": "du",
+          "ipa": "/dy/",
+          "t": "de la",
+          "pos": "preposición + artículo",
+          "lemma": "de + le",
+          "detail": "Contracción de 'de' y 'le'."
+        },
+        {
+          "w": "serpent",
+          "ipa": "/sɛʁpɑ̃/",
+          "t": "serpiente",
+          "pos": "sustantivo",
+          "lemma": "serpent",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "serpiente",
+              "pos": "sustantivo",
+              "genero": "masculino"
+            }
+          ]
+        },
+        {
+          "w": "boa",
+          "ipa": "/bɔa/",
+          "t": "boa",
+          "pos": "sustantivo",
+          "lemma": "boa",
+          "detail": "Masculino singular."
+        },
+        {
+          "w": "afin que",
+          "ipa": "/afɛ̃ kə/",
+          "t": "para que",
+          "pos": "conjunción",
+          "lemma": "afin que",
+          "detail": "Introduce una cláusula de propósito y rige el subjonctif."
+        },
+        {
+          "w": "les",
+          "ipa": "/le/",
+          "t": "las",
+          "pos": "artículo definido",
+          "lemma": "le",
+          "detail": "Plural.",
+          "dict": [
+            {
+              "traduccion": "el",
+              "pos": "artículo",
+              "genero": "femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "el",
+              "pos": "artículo",
+              "genero": "masculino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "lo",
+              "pos": "3a_persona",
+              "genero": "femenino",
+              "numero": "singular"
+            }
+          ]
+        },
+        {
+          "w": "grandes",
+          "ipa": "/ɡʁɑ̃d/",
+          "t": "mayores",
+          "pos": "adjetivo",
+          "lemma": "grand",
+          "detail": "Femenino plural, concuerda con 'personnes'.",
+          "dict": [
+            {
+              "traduccion": "grande",
+              "pos": "adjetivo",
+              "genero": "femenino"
+            },
+            {
+              "traduccion": "grande",
+              "pos": "adjetivo",
+              "genero": "masculino"
+            },
+            {
+              "traduccion": "magno",
+              "pos": "adjetivo"
+            }
+          ]
+        },
+        {
+          "w": "personnes",
+          "ipa": "/pɛʁsɔn/",
+          "t": "personas",
+          "pos": "sustantivo",
+          "lemma": "personne",
+          "detail": "Femenino plural.",
+          "dict": [
+            {
+              "traduccion": "persona",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "nadie",
+              "pos": "pronombre",
+              "genero": "masculino_femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "persona",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "puissent",
+          "ipa": "/pɥis/",
+          "t": "pudieran",
+          "pos": "verbo",
+          "lemma": "pouvoir",
+          "detail": "Subjonctif de 'pouvoir', tercera persona del plural.",
+          "dict": [
+            {
+              "traduccion": "poder",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "poder",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "poder",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "pouvoir",
+          "part_passé": {
+            "masc_sg": "pu",
+            "fem_sg": "pus",
+            "masc_pl": "pue",
+            "fem_pl": "pues"
+          }
+        },
+        {
+          "w": "comprendre",
+          "ipa": "/kɔ̃pʁɑ̃dʁ/",
+          "t": "comprender",
+          "pos": "verbo",
+          "lemma": "comprendre",
+          "detail": "Infinitivo.",
+          "dict": [
+            {
+              "traduccion": "comprender",
+              "pos": "verbo"
+            },
+            {
+              "traduccion": "abarcar",
+              "pos": "verbo"
+            },
+            {
+              "traduccion": "entender",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "comprendre",
+          "part_passé": {
+            "masc_sg": "compris",
+            "fem_sg": "compris",
+            "masc_pl": "comprise",
+            "fem_pl": "comprises"
+          }
+        }
+      ],
+      "phonetics": {
+        "features": [
+          {
+            "feature": "elision",
+            "text": "l'intérieur",
+            "explanation": "Elisión de 'e' en 'le' antes de 'intérieur'."
+          },
+          {
+            "feature": "liaison",
+            "text": "grandes personnes",
+            "explanation": "La 's' final de 'grandes' se pronuncia /z/ al hacer la liaison con 'personnes'."
+          }
+        ]
+      },
+      "contrast": "El passé composé ('j'ai dessiné') se traduce por el pretérito indefinido ('dibujé') para una acción puntual. 'Afin que' es directamente 'para que', y ambos requieren el subjuntivo ('puissent' -> 'pudieran'). La expresión 'grandes personnes' (lit. grandes personas) se traduce como 'personas mayores' o 'adultos' en español, lo que es un matiz cultural."
+    },
+    {
+      "idx": 5,
+      "fr": "Elles ont besoin de toujours tout expliquer.",
+      "es": "Tienen la necesidad de explicarlo siempre todo.",
+      "ipa": "/ɛl zɔ̃ bəzwɛ̃ də tuʒuʁ tu zɛksplike/",
+      "grammar": {
+        "summary": "Esta frase utiliza la expresión 'avoir besoin de' (tener necesidad de). El verbo auxiliar 'ont' está en presente de indicativo. El infinitivo 'expliquer' sigue a la preposición 'de'.",
+        "tense_focus": {
+          "tense": "Présent de l'Indicatif",
+          "explanation": "El présent de l'indicatif ('ont') se utiliza para describir una verdad general o una acción habitual en el presente."
+        },
+        "key_rules": [
+          {
+            "rule": "Expresión 'avoir besoin de'",
+            "detail": "Esta expresión significa 'tener necesidad de' y siempre se construye con 'de' seguido de un sustantivo o un infinitivo."
+          },
+          {
+            "rule": "Construcción 'tout expliquer'",
+            "detail": "'Tout' (todo) puede actuar como pronombre u adverbio y a menudo precede al infinitivo en estas construcciones."
+          }
+        ]
+      },
+      "words": [
+        {
+          "w": "Elles",
+          "ipa": "/ɛl/",
+          "t": "Ellas",
+          "pos": "pronombre personal",
+          "lemma": "elle",
+          "detail": "Sujeto, tercera persona del plural femenino."
+        },
+        {
+          "w": "ont",
+          "ipa": "/zɔ̃/",
+          "t": "tienen",
+          "pos": "verbo",
+          "lemma": "avoir",
+          "detail": "Présent de l'indicatif de 'avoir', tercera persona del plural.",
+          "dict": [
+            {
+              "traduccion": "depósito",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "haber",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "haber",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "avoir",
+          "part_passé": {
+            "masc_sg": "eu",
+            "fem_sg": "eus",
+            "masc_pl": "eue",
+            "fem_pl": "eues"
+          }
+        },
+        {
+          "w": "besoin",
+          "ipa": "/bəzwɛ̃/",
+          "t": "necesidad",
+          "pos": "sustantivo",
+          "lemma": "besoin",
+          "detail": "Parte de la expresión 'avoir besoin de'.",
+          "dict": [
+            {
+              "traduccion": "necesidad",
+              "pos": "sustantivo",
+              "genero": "masculino"
+            }
+          ]
+        },
+        {
+          "w": "de",
+          "ipa": "/də/",
+          "t": "de",
+          "pos": "preposición",
+          "lemma": "de",
+          "detail": "Introduce el objeto de la necesidad.",
+          "dict": [
+            {
+              "traduccion": "de",
+              "pos": "preposición"
+            },
+            {
+              "traduccion": "baskonista",
+              "pos": "adjetivo",
+              "genero": "masculino_femenino",
+              "numero": "sing_plural"
+            },
+            {
+              "traduccion": "baskonista",
+              "pos": "adjetivo",
+              "genero": "masculino_femenino",
+              "numero": "sing_plural"
+            }
+          ]
+        },
+        {
+          "w": "toujours",
+          "ipa": "/tuʒuʁ/",
+          "t": "siempre",
+          "pos": "adverbio",
+          "lemma": "toujours",
+          "detail": "Indica frecuencia.",
+          "dict": [
+            {
+              "traduccion": "siempre",
+              "pos": "adverbio"
+            }
+          ]
+        },
+        {
+          "w": "tout",
+          "ipa": "/tu/",
+          "t": "todo",
+          "pos": "pronombre/adverbio",
+          "lemma": "tout",
+          "detail": "Se refiere a todas las cosas.",
+          "dict": [
+            {
+              "traduccion": "todo",
+              "pos": "predeterminante"
+            },
+            {
+              "traduccion": "todo",
+              "pos": "pronombre"
+            },
+            {
+              "traduccion": "sin",
+              "pos": "adverbio"
+            }
+          ]
+        },
+        {
+          "w": "expliquer",
+          "ipa": "/ɛksplike/",
+          "t": "explicar",
+          "pos": "verbo",
+          "lemma": "expliquer",
+          "detail": "Infinitivo.",
+          "dict": [
+            {
+              "traduccion": "explicar",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "expliquer",
+          "part_passé": {
+            "masc_sg": "expliqué",
+            "fem_sg": "expliqués",
+            "masc_pl": "expliquée",
+            "fem_pl": "expliquées"
+          }
+        }
+      ],
+      "phonetics": {
+        "features": [
+          {
+            "feature": "liaison",
+            "text": "Elles ont",
+            "explanation": "La 's' de 'elles' se pronuncia /z/ al hacer la liaison con 'ont'."
+          },
+          {
+            "feature": "liaison",
+            "text": "tout expliquer",
+            "explanation": "La 't' de 'tout' se pronuncia /t/ al hacer la liaison con 'expliquer', aunque no siempre obligatoria, es común en frases fluidas."
+          }
+        ]
+      },
+      "contrast": "La expresión 'avoir besoin de' es un paralelo exacto de 'tener necesidad de'. El orden de los adverbios ('toujours tout expliquer') es similar al español ('siempre todo explicar', o 'explicarlo siempre todo')."
+    },
+    {
+      "idx": 6,
+      "fr": "J'ai montré mon chef-d'œuvre aux grandes personnes et je leur ai demandé si mon dessin leur faisait peur.",
+      "es": "Mostré mi obra maestra a las personas mayores y les pregunté si mi dibujo les daba miedo.",
+      "ipa": "/ʒe mɔ̃tʁe mɔ̃ ʃɛfdœuvʁ o ɡʁɑ̃d pɛʁsɔn e ʒə lœʁ e dəmɑ̃de si mɔ̃ desɛ̃ lœʁ fəzɛ pœʁ/",
+      "grammar": {
+        "summary": "Esta frase compleja utiliza el passé composé para acciones puntuales en el pasado ('j'ai montré', 'j'ai demandé'). Introduce un discurso indirecto con 'si' (si). El imparfait ('faisait') se utiliza en la cláusula subordinada para describir una situación en el pasado.",
+        "tense_focus": {
+          "tense": "Passé Composé y Imparfait",
+          "explanation": "El passé composé se usa para las acciones principales y completadas. El imparfait ('faisait') se usa para describir el estado emocional o una cualidad del dibujo en la pregunta indirecta."
+        },
+        "key_rules": [
+          {
+            "rule": "Passé Composé",
+            "detail": "Acciones completadas en el pasado. 'Avoir' + participio pasado."
+          },
+          {
+            "rule": "Contracción 'aux'",
+            "detail": "'Aux' es la contracción de la preposición 'à' y el artículo definido plural 'les'."
+          },
+          {
+            "rule": "Pronombres de objeto indirecto",
+            "detail": "'leur' (a ellos/ellas) se coloca antes del verbo ('ai demandé', 'faisait')."
+          },
+          {
+            "rule": "Discurso indirecto con 'si'",
+            "detail": "Para preguntas cerradas en discurso indirecto, se usa 'si' (si) sin inversión en la cláusula."
+          }
+        ]
+      },
+      "words": [
+        {
+          "w": "J'ai montré",
+          "ipa": "/ʒe mɔ̃tʁe/",
+          "t": "Mostré",
+          "pos": "verbo",
+          "lemma": "montrer",
+          "detail": "Passé composé de 'montrer', primera persona del singular.",
+          "dict": [
+            {
+              "traduccion": "mostrar",
+              "pos": "verbo"
+            },
+            {
+              "traduccion": "señalar",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "montrer",
+          "part_passé": {
+            "masc_sg": "montré",
+            "fem_sg": "montrés",
+            "masc_pl": "montrée",
+            "fem_pl": "montrées"
+          }
+        },
+        {
+          "w": "mon",
+          "ipa": "/mɔ̃/",
+          "t": "mi",
+          "pos": "adjetivo posesivo",
+          "lemma": "mon",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "mío",
+              "pos": "posesivo",
+              "genero": "masculino_femenino",
+              "numero": "plural"
+            },
+            {
+              "traduccion": "mío",
+              "pos": "posesivo",
+              "genero": "femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "mío",
+              "pos": "posesivo",
+              "genero": "masculino",
+              "numero": "singular"
+            }
+          ]
+        },
+        {
+          "w": "chef-d'œuvre",
+          "ipa": "/ʃɛfdœuvʁ/",
+          "t": "obra maestra",
+          "pos": "sustantivo",
+          "lemma": "chef-d'œuvre",
+          "detail": "Masculino singular."
+        },
+        {
+          "w": "aux",
+          "ipa": "/o/",
+          "t": "a las",
+          "pos": "preposición + artículo",
+          "lemma": "à + les",
+          "detail": "Contracción de 'à' y 'les'."
+        },
+        {
+          "w": "grandes",
+          "ipa": "/ɡʁɑ̃d/",
+          "t": "mayores",
+          "pos": "adjetivo",
+          "lemma": "grand",
+          "detail": "Femenino plural.",
+          "dict": [
+            {
+              "traduccion": "grande",
+              "pos": "adjetivo",
+              "genero": "femenino"
+            },
+            {
+              "traduccion": "grande",
+              "pos": "adjetivo",
+              "genero": "masculino"
+            },
+            {
+              "traduccion": "magno",
+              "pos": "adjetivo"
+            }
+          ]
+        },
+        {
+          "w": "personnes",
+          "ipa": "/pɛʁsɔn/",
+          "t": "personas",
+          "pos": "sustantivo",
+          "lemma": "personne",
+          "detail": "Femenino plural.",
+          "dict": [
+            {
+              "traduccion": "persona",
+              "pos": "sustantivo"
+            },
+            {
+              "traduccion": "nadie",
+              "pos": "pronombre",
+              "genero": "masculino_femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "persona",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "et",
+          "ipa": "/e/",
+          "t": "y",
+          "pos": "conjunción",
+          "lemma": "et",
+          "detail": "Conjunción copulativa.",
+          "dict": [
+            {
+              "traduccion": "y",
+              "pos": "conjunción"
+            },
+            {
+              "traduccion": "etcétera",
+              "pos": "conjunción"
+            },
+            {
+              "traduccion": "etcétera",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "je",
+          "ipa": "/ʒə/",
+          "t": "yo",
+          "pos": "pronombre personal",
+          "lemma": "je",
+          "detail": "Sujeto, primera persona del singular.",
+          "dict": [
+            {
+              "traduccion": "yo",
+              "pos": "pronombre"
+            }
+          ]
+        },
+        {
+          "w": "leur",
+          "ipa": "/lœʁ/",
+          "t": "les",
+          "pos": "pronombre personal",
+          "lemma": "leur",
+          "detail": "Objeto indirecto, tercera persona del plural, antes del auxiliar.",
+          "dict": [
+            {
+              "traduccion": "le",
+              "pos": "3a_persona",
+              "genero": "masculino_femenino",
+              "numero": "plural"
+            },
+            {
+              "traduccion": "le",
+              "pos": "3a_persona",
+              "genero": "masculino_femenino",
+              "numero": "plural"
+            },
+            {
+              "traduccion": "suyo",
+              "pos": "posesivo",
+              "genero": "masculino_femenino"
+            }
+          ]
+        },
+        {
+          "w": "ai demandé",
+          "ipa": "/e dəmɑ̃de/",
+          "t": "pregunté",
+          "pos": "verbo",
+          "lemma": "demander",
+          "detail": "Passé composé de 'demander', con el pronombre objeto indirecto 'leur' intercalado.",
+          "dict": [
+            {
+              "traduccion": "pedir",
+              "pos": "verbo"
+            },
+            {
+              "traduccion": "preguntar",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "demander",
+          "part_passé": {
+            "masc_sg": "demandé",
+            "fem_sg": "demandés",
+            "masc_pl": "demandée",
+            "fem_pl": "demandées"
+          }
+        },
+        {
+          "w": "si",
+          "ipa": "/si/",
+          "t": "si",
+          "pos": "conjunción",
+          "lemma": "si",
+          "detail": "Introduce una cláusula subordinada interrogativa indirecta.",
+          "dict": [
+            {
+              "traduccion": "si",
+              "pos": "conjunción"
+            },
+            {
+              "traduccion": "sí",
+              "pos": "adverbio"
+            },
+            {
+              "traduccion": "de",
+              "pos": "conjunción"
+            }
+          ]
+        },
+        {
+          "w": "mon",
+          "ipa": "/mɔ̃/",
+          "t": "mi",
+          "pos": "adjetivo posesivo",
+          "lemma": "mon",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "mío",
+              "pos": "posesivo",
+              "genero": "masculino_femenino",
+              "numero": "plural"
+            },
+            {
+              "traduccion": "mío",
+              "pos": "posesivo",
+              "genero": "femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "mío",
+              "pos": "posesivo",
+              "genero": "masculino",
+              "numero": "singular"
+            }
+          ]
+        },
+        {
+          "w": "dessin",
+          "ipa": "/desɛ̃/",
+          "t": "dibujo",
+          "pos": "sustantivo",
+          "lemma": "dessin",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "dibujo",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "leur",
+          "ipa": "/lœʁ/",
+          "t": "les",
+          "pos": "pronombre personal",
+          "lemma": "leur",
+          "detail": "Objeto indirecto, tercera persona del plural, antes del verbo.",
+          "dict": [
+            {
+              "traduccion": "le",
+              "pos": "3a_persona",
+              "genero": "masculino_femenino",
+              "numero": "plural"
+            },
+            {
+              "traduccion": "le",
+              "pos": "3a_persona",
+              "genero": "masculino_femenino",
+              "numero": "plural"
+            },
+            {
+              "traduccion": "suyo",
+              "pos": "posesivo",
+              "genero": "masculino_femenino"
+            }
+          ]
+        },
+        {
+          "w": "faisait",
+          "ipa": "/fəzɛ/",
+          "t": "daba",
+          "pos": "verbo",
+          "lemma": "faire",
+          "detail": "Imparfait de 'faire', tercera persona del singular.",
+          "dict": [
+            {
+              "traduccion": "hacer",
+              "pos": "verbo"
+            },
+            {
+              "traduccion": "prescindir",
+              "pos": "verbo"
+            },
+            {
+              "traduccion": "hacer",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "faire",
+          "part_passé": {
+            "masc_sg": "fait",
+            "fem_sg": "faits",
+            "masc_pl": "faite",
+            "fem_pl": "faites"
+          }
+        },
+        {
+          "w": "peur",
+          "ipa": "/pœʁ/",
+          "t": "miedo",
+          "pos": "sustantivo",
+          "lemma": "peur",
+          "detail": "Parte de la expresión 'faire peur' (dar miedo).",
+          "dict": [
+            {
+              "traduccion": "miedo",
+              "pos": "sustantivo",
+              "genero": "femenino"
+            }
+          ]
+        }
+      ],
+      "phonetics": {
+        "features": [
+          {
+            "feature": "elision",
+            "text": "chef-d'œuvre",
+            "explanation": "Elisión de 'e' en 'de' antes de 'œuvre'."
+          },
+          {
+            "feature": "liaison",
+            "text": "grandes personnes",
+            "explanation": "La 's' de 'grandes' se pronuncia /z/ en liaison con 'personnes'."
+          }
+        ]
+      },
+      "contrast": "El Passé Composé en francés ('j'ai montré', 'j'ai demandé') se traduce con el pretérito indefinido en español ('mostré', 'pregunté'). 'Chef-d'œuvre' es 'obra maestra'. La expresión 'faire peur' (hacer miedo) se traduce a 'dar miedo' en español. El uso de 'leur' como pronombre de objeto indirecto es similar al 'les' en español."
+    },
+    {
+      "idx": 7,
+      "fr": "Elles m'ont répondu : « Pourquoi un chapeau ferait-il peur ? »",
+      "es": "Me respondieron: «¿Por qué un sombrero daría miedo?»",
+      "ipa": "/ɛl mɔ̃ ʁepɔ̃dy puʁkwa œ̃ ʃapo fəʁɛ til pœʁ/",
+      "grammar": {
+        "summary": "Esta frase contiene un passé composé ('m'ont répondu') para la acción principal y un conditionnel présent ('ferait') en una pregunta directa. La inversión sujeto-verbo ('ferait-il') es característica de las preguntas en francés, aunque en el lenguaje coloquial se usa menos.",
+        "tense_focus": {
+          "tense": "Passé Composé y Conditionnel Présent",
+          "explanation": "El passé composé se usa para la acción de respuesta completada. El conditionnel présent ('ferait') se usa para expresar una pregunta hipotética o una eventualidad en el discurso directo."
+        },
+        "key_rules": [
+          {
+            "rule": "Passé Composé",
+            "detail": "Formado con el auxiliar 'avoir' y el participio pasado 'répondu'."
+          },
+          {
+            "rule": "Pronombre de objeto directo/indirecto",
+            "detail": "'m'' (me) es un pronombre de objeto indirecto que precede al auxiliar 'ont'."
+          },
+          {
+            "rule": "Inversión sujeto-verbo en preguntas",
+            "detail": "En preguntas formales, el sujeto ('il') se coloca después del verbo ('ferait'), unido con un guion. Se añade una 't' eufónica si la terminación del verbo es vocal y el pronombre empieza por 'il/elle/on'."
+          },
+          {
+            "rule": "Conditionnel Présent",
+            "detail": "Expresa una acción hipotética o una posibilidad."
+          }
+        ]
+      },
+      "words": [
+        {
+          "w": "Elles",
+          "ipa": "/ɛl/",
+          "t": "Ellas",
+          "pos": "pronombre personal",
+          "lemma": "elle",
+          "detail": "Sujeto, tercera persona del plural femenino."
+        },
+        {
+          "w": "m'ont répondu",
+          "ipa": "/mɔ̃ ʁepɔ̃dy/",
+          "t": "Me respondieron",
+          "pos": "verbo + pronombre",
+          "lemma": "répondre",
+          "detail": "Passé composé de 'répondre', con el pronombre objeto indirecto 'me' elidido.",
+          "dict": [
+            {
+              "traduccion": "responder",
+              "pos": "verbo"
+            },
+            {
+              "traduccion": "responder",
+              "pos": "verbo"
+            },
+            {
+              "traduccion": "atender",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "répondre",
+          "part_passé": {
+            "masc_sg": "répondu",
+            "fem_sg": "répondus",
+            "masc_pl": "répondue",
+            "fem_pl": "répondues"
+          }
+        },
+        {
+          "w": ":",
+          "ipa": "//",
+          "t": ":",
+          "pos": "puntuación",
+          "lemma": "puntuación",
+          "detail": "Dos puntos."
+        },
+        {
+          "w": "«",
+          "ipa": "//",
+          "t": "«",
+          "pos": "puntuación",
+          "lemma": "puntuación",
+          "detail": "Comillas."
+        },
+        {
+          "w": "Pourquoi",
+          "ipa": "/puʁkwa/",
+          "t": "¿Por qué",
+          "pos": "adverbio interrogativo",
+          "lemma": "pourquoi",
+          "detail": "Introduce una pregunta sobre la razón.",
+          "dict": [
+            {
+              "traduccion": "porqué",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "un",
+          "ipa": "/œ̃/",
+          "t": "un",
+          "pos": "artículo indefinido",
+          "lemma": "un",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "femenino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "artículo",
+              "genero": "masculino",
+              "numero": "singular"
+            },
+            {
+              "traduccion": "uno",
+              "pos": "numeral"
+            }
+          ]
+        },
+        {
+          "w": "chapeau",
+          "ipa": "/ʃapo/",
+          "t": "sombrero",
+          "pos": "sustantivo",
+          "lemma": "chapeau",
+          "detail": "Masculino singular.",
+          "dict": [
+            {
+              "traduccion": "sombrero",
+              "pos": "sustantivo"
+            }
+          ]
+        },
+        {
+          "w": "ferait-il",
+          "ipa": "/fəʁɛ til/",
+          "t": "daría",
+          "pos": "verbo + pronombre",
+          "lemma": "faire",
+          "detail": "Conditionnel présent de 'faire', tercera persona del singular, con inversión sujeto-verbo y 't' eufónica.",
+          "dict": [
+            {
+              "traduccion": "hacer",
+              "pos": "verbo"
+            },
+            {
+              "traduccion": "prescindir",
+              "pos": "verbo"
+            },
+            {
+              "traduccion": "hacer",
+              "pos": "verbo"
+            }
+          ],
+          "conj_ref": "faire",
+          "part_passé": {
+            "masc_sg": "fait",
+            "fem_sg": "faits",
+            "masc_pl": "faite",
+            "fem_pl": "faites"
+          }
+        },
+        {
+          "w": "peur",
+          "ipa": "/pœʁ/",
+          "t": "miedo",
+          "pos": "sustantivo",
+          "lemma": "peur",
+          "detail": "Parte de la expresión 'faire peur'.",
+          "dict": [
+            {
+              "traduccion": "miedo",
+              "pos": "sustantivo",
+              "genero": "femenino"
+            }
+          ]
+        },
+        {
+          "w": "?",
+          "ipa": "//",
+          "t": "?",
+          "pos": "puntuación",
+          "lemma": "puntuación",
+          "detail": "Signo de interrogación."
+        },
+        {
+          "w": "»",
+          "ipa": "//",
+          "t": "»",
+          "pos": "puntuación",
+          "lemma": "puntuación",
+          "detail": "Comillas."
+        }
+      ],
+      "phonetics": {
+        "features": [
+          {
+            "feature": "elision",
+            "text": "m'ont",
+            "explanation": "Elisión de 'e' en 'me' antes de 'ont'."
+          },
+          {
+            "feature": "liaison",
+            "text": "ferait-il",
+            "explanation": "Aunque es una 't' eufónica, funciona como una liaison entre el verbo que termina en vocal y el pronombre 'il'."
+          }
+        ]
+      },
+      "contrast": "El Passé Composé 'm'ont répondu' se traduce al pretérito indefinido 'me respondieron'. La pregunta directa con 'Pourquoi' es similar a '¿Por qué'. El conditionnel présent 'ferait' concuerda con el condicional 'daría' en español para una pregunta hipotética. La inversión sujeto-verbo ('ferait-il') es una construcción más formal y particular del francés, mientras que en español la inversión es más libre o implícita."
+    }
+  ],
+  "_offline_data": {
+    "conjugations_count": 7016,
+    "dictionary_count": 17766
+  },
+  "metadata": {
+    "processed_with": "gemini-flash",
+    "conjugations_file": "conjugations-fr.json",
+    "dictionary_file": "dictionary-fr-es.json"
+  }
+}
