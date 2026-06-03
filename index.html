@@ -5,16 +5,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lecteur — Lector bilingüe FR↔ES</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* TODO: Codex will fill in styles */
+    :root {
+      --bg: #FAF8F5;
+      --bg-card: #FFFFFF;
+      --text: #2B2825;
+      --text-secondary: #6B6560;
+      --accent: #8B5E3C;
+      --accent-light: #D4A373;
+      --border: rgba(43,40,37,0.08);
+      --radius: 16px;
+      --shadow: 0 2px 8px rgba(43,40,37,0.06);
+      --font-serif: 'IBM Plex Serif', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+    }
+    html[data-theme="dark"] {
+      --bg: #1C1C1E;
+      --bg-card: #2C2C2E;
+      --text: #E8E4DE;
+      --text-secondary: #A09A94;
+      --accent: #D4A373;
+      --border: rgba(232,228,222,0.08);
+      --shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.3s, color 0.3s;
+    }
+    .screen { display: none; }
+    .screen.active { display: block; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* ─── Library ─── */
+    .app-header {
+      text-align: center; padding: 3rem 1rem 1.5rem;
+    }
+    .app-header h1 {
+      font-family: var(--font-serif); font-weight: 500;
+      font-size: 2rem; color: var(--accent);
+    }
+    .subtitle { color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.3rem; }
+    .library-grid {
+      max-width: 800px; margin: 0 auto; padding: 0 1rem 3rem;
+      display: grid; gap: 1rem;
+    }
+    .book-card {
+      background: var(--bg-card); border-radius: var(--radius);
+      padding: 1.25rem; cursor: pointer;
+      border: 1px solid var(--border); box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .book-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .book-icon { font-size: 2rem; }
+    .book-info h3 { font-family: var(--font-serif); font-weight: 500; font-size: 1.1rem; }
+    .book-info p { color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.2rem; }
+    .book-meta { font-size: 0.8rem; color: var(--accent); margin-top: 0.3rem; font-weight: 500; }
+
+    /* ─── Reader ─── */
+    .reader-toolbar {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-card);
+      position: sticky; top: 0; z-index: 10;
+    }
+    .btn-back {
+      background: none; border: none; font-size: 1.3rem;
+      cursor: pointer; color: var(--text); padding: 0.25rem 0.5rem;
+      border-radius: 8px;
+    }
+    .btn-back:hover { background: var(--border); }
+    .reader-title { flex: 1; font-family: var(--font-serif); font-weight: 500; font-size: 1rem; }
+    .toolbar-right { display: flex; align-items: center; gap: 0.75rem; }
+    .btn-icon {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid var(--border); background: var(--bg);
+      cursor: pointer; font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+    }
+    .btn-icon:hover { background: var(--accent-light); color: white; border-color: var(--accent-light); }
+    .btn-icon.active { background: var(--accent); color: white; border-color: var(--accent); }
+    .chapter-label { font-size: 0.8rem; color: var(--text-secondary); }
+
+    .reader-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1000px;
+      margin: 0 auto;
+      min-height: calc(100vh - 60px);
+    }
+    @media (max-width: 720px) {
+      .reader-container { grid-template-columns: 1fr; }
+    }
+    .column {
+      padding: 1.5rem;
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .column-fr {
+      border-right: 1px solid var(--border);
+      background: var(--bg-card);
+    }
+    @media (max-width: 720px) {
+      .column-fr { border-right: none; border-bottom: 1px solid var(--border); }
+    }
+    .line {
+      cursor: pointer;
+      padding: 0.15rem 0.5rem;
+      border-radius: 6px;
+      transition: all 0.2s;
+      border-left: 3px solid transparent;
+    }
+    .line:hover { background: rgba(139,94,60,0.05); }
+    .line.active {
+      background: rgba(139,94,60,0.1);
+      border-left-color: var(--accent);
+    }
+    .line.active.es { border-left-color: var(--accent-light); }
+    .word {
+      cursor: pointer;
+      border-bottom: 1px dashed rgba(139,94,60,0.3);
+      transition: all 0.15s;
+      position: relative;
+    }
+    .word:hover {
+      background: var(--accent-light);
+      color: white;
+      border-radius: 3px;
+    }
+    .reader-footer {
+      max-width: 1000px; margin: 0 auto;
+      padding: 0.5rem 1.5rem 1rem;
+    }
+    .word-tooltip {
+      display: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      font-size: 0.9rem;
+      max-width: 400px;
+    }
+    .word-tooltip.visible { display: block; animation: fadeIn 0.2s ease; }
+    .word-tooltip .wt-word { font-weight: 600; color: var(--accent); }
+    .word-tooltip .wt-trans { margin-top: 0.2rem; }
+    .word-tooltip .wt-pos { font-size: 0.8rem; color: var(--text-secondary); font-style: italic; }
+    .word-tooltip .wt-grammar { font-size: 0.85rem; color: var(--text-secondary); border-top: 1px solid var(--border); padding-top: 0.4rem; margin-top: 0.4rem; }
+
+    .theme-toggle {
+      position: fixed; bottom: 1rem; right: 1rem;
+      width: 44px; height: 44px; border-radius: 50%;
+      border: 1px solid var(--border); background: var(--bg-card);
+      cursor: pointer; font-size: 1.2rem;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow); z-index: 100;
+    }
   </style>
 </head>
 <body>
-  <!-- Screen: Library -->
+  <!-- Library Screen -->
   <div id="screen-library" class="screen active">
     <header class="app-header">
       <h1>📖 Lecteur</h1>
@@ -23,31 +183,230 @@
     <div id="library-grid" class="library-grid"></div>
   </div>
 
-  <!-- Screen: Reader -->
+  <!-- Reader Screen -->
   <div id="screen-reader" class="screen">
     <div class="reader-toolbar">
       <button class="btn-back" onclick="showLibrary()">←</button>
       <span id="reader-title" class="reader-title"></span>
       <div class="toolbar-right">
-        <button id="btn-play" class="btn-icon" onclick="togglePlay()" title="Reproducir/Detener">▶</button>
-        <span id="progress-chapter" class="chapter-label">Capítulo 1</span>
+        <span class="chapter-label" id="chapter-label">Cap 1</span>
+        <button class="btn-icon" onclick="togglePlay()" id="btn-play" title="Reproducir/Detener">▶</button>
       </div>
     </div>
     <div class="reader-container">
-      <div class="column column-fr" id="col-fr">
-        <!-- French text rendered by JS -->
-      </div>
-      <div class="column column-es" id="col-es">
-        <!-- Spanish text rendered by JS -->
-      </div>
+      <div class="column column-fr" id="col-fr"></div>
+      <div class="column column-es" id="col-es"></div>
     </div>
     <div class="reader-footer">
-      <div id="word-tooltip" class="word-tooltip hidden"></div>
+      <div id="word-tooltip" class="word-tooltip"></div>
     </div>
   </div>
 
+  <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Cambiar tema">🌙</button>
+
   <script>
-    // TODO: Codex will fill in the JS
+    // ─── Theme ───
+    const theme = localStorage.getItem('lecteur_theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+    document.getElementById('theme-btn').textContent = theme === 'dark' ? '☀️' : '🌙';
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('lecteur_theme', next);
+      document.getElementById('theme-btn').textContent = next === 'dark' ? '☀️' : '🌙';
+    }
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    prefersDark.addEventListener('change', e => {
+      if (!localStorage.getItem('lecteur_theme')) {
+        const th = e.matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', th);
+        document.getElementById('theme-btn').textContent = th === 'dark' ? '☀️' : '🌙';
+      }
+    });
+
+    // ─── Screens ───
+    function showScreen(id) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    // ─── State ───
+    let currentBook = null;
+    let currentChapter = null;
+    let chapterData = null;
+    let currentLine = 0;
+    let isPlaying = false;
+    let audioCtx = null;
+
+    // ─── Library ───
+    const CATALOG = {
+      books: [
+        {
+          id: "le-petit-prince",
+          title: "Le Petit Prince",
+          author: "Antoine de Saint-Exupéry",
+          icon: "👑",
+          color: "#D4A373",
+          description: "El principito enseña lo esencial a los ojos del corazón.",
+          chapters: [
+            { num: 1, title: "Chapitre 1" }
+          ]
+        }
+      ]
+    };
+
+    function renderLibrary() {
+      const grid = document.getElementById('library-grid');
+      grid.innerHTML = CATALOG.books.map(b => `
+        <div class="book-card" onclick="openBook('${b.id}')">
+          <div class="book-icon">${b.icon}</div>
+          <div class="book-info">
+            <h3>${b.title}</h3>
+            <p>${b.description}</p>
+            <div class="book-meta">${b.author} · ${b.chapters.length} capítulos · ${b.id === 'le-petit-prince' ? 'FR → ES' : ''}</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function openBook(bookId) {
+      currentBook = CATALOG.books.find(b => b.id === bookId);
+      if (!currentBook) return;
+      // Load chapter 1
+      await loadChapter(1);
+      showScreen('screen-reader');
+    }
+
+    async function loadChapter(num) {
+      const resp = await fetch(`data/${currentBook.id}/ch${String(num).padStart(2, '0')}.json`);
+      chapterData = await resp.json();
+      currentChapter = num;
+      currentLine = 0;
+      renderChapter();
+      document.getElementById('reader-title').textContent = currentBook.title;
+      document.getElementById('chapter-label').textContent = chapterData.title;
+    }
+
+    function renderChapter() {
+      const colFr = document.getElementById('col-fr');
+      const colEs = document.getElementById('col-es');
+      if (!chapterData || !chapterData.lines) return;
+
+      colFr.innerHTML = chapterData.lines.map((l, i) => {
+        const words = l.words ? l.words.map(w => 
+          `<span class="word" data-word="${w.w}" data-trans="${w.t}" data-pos="${w.p || ''}" onclick="showWordTip(event, this)">${w.w}</span>`
+        ).join(' ') : l.fr;
+        return `<div class="line ${i === currentLine ? 'active' : ''}" data-idx="${i}" onclick="goToLine(${i})">${words}</div>`;
+      }).join('');
+
+      colEs.innerHTML = chapterData.lines.map((l, i) => 
+        `<div class="line es ${i === currentLine ? 'active' : ''}" data-idx="${i}">${l.es}</div>`
+      ).join('');
+    }
+
+    function goToLine(idx) {
+      document.querySelectorAll('.line').forEach(l => l.classList.remove('active'));
+      currentLine = idx;
+      const lines = document.querySelectorAll(`.line[data-idx="${idx}"]`);
+      lines.forEach(l => l.classList.add('active'));
+      lines[0]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      hideWordTip();
+    }
+
+    function showWordTip(event, el) {
+      event.stopPropagation();
+      const word = el.dataset.word;
+      const trans = el.dataset.trans;
+      const pos = el.dataset.pos || '';
+      const tip = document.getElementById('word-tooltip');
+
+      // Also show grammar from the current line if available
+      let grammar = '';
+      if (chapterData && chapterData.lines && chapterData.lines[currentLine]) {
+        grammar = chapterData.lines[currentLine].grammar || '';
+      }
+
+      tip.innerHTML = `
+        <div class="wt-word">${word}</div>
+        <div class="wt-trans">→ ${trans}</div>
+        ${pos ? `<div class="wt-pos">${pos}</div>` : ''}
+        ${grammar ? `<div class="wt-grammar">📝 ${grammar}</div>` : ''}
+      `;
+      tip.classList.add('visible');
+    }
+
+    function hideWordTip() {
+      document.getElementById('word-tooltip').classList.remove('visible');
+    }
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.word')) hideWordTip();
+    });
+
+    // ─── Keyboard Navigation ───
+    document.addEventListener('keydown', (e) => {
+      if (!document.getElementById('screen-reader').classList.contains('active')) return;
+      if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (currentLine > 0) goToLine(currentLine - 1);
+      }
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (chapterData && currentLine < chapterData.lines.length - 1) goToLine(currentLine + 1);
+      }
+      if (e.key === ' ') { e.preventDefault(); togglePlay(); }
+    });
+
+    // ─── TTS Playback ───
+    let utterance = null;
+    function togglePlay() {
+      if (isPlaying) {
+        window.speechSynthesis.cancel();
+        isPlaying = false;
+        document.getElementById('btn-play').textContent = '▶';
+        document.getElementById('btn-play').classList.remove('active');
+        return;
+      }
+      if (!chapterData || !chapterData.lines || !chapterData.lines[currentLine]) return;
+
+      const line = chapterData.lines[currentLine];
+      utterance = new SpeechSynthesisUtterance(line.fr);
+      utterance.lang = 'fr-FR';
+      utterance.rate = 0.85;
+
+      // Try to find a French voice
+      const voices = window.speechSynthesis.getVoices();
+      const frVoice = voices.find(v => v.lang.startsWith('fr'));
+      if (frVoice) utterance.voice = frVoice;
+
+      utterance.onend = () => {
+        if (currentLine < chapterData.lines.length - 1 && isPlaying) {
+          goToLine(currentLine + 1);
+          // Continue playing next line
+          const nextLine = chapterData.lines[currentLine];
+          const nextUtterance = new SpeechSynthesisUtterance(nextLine.fr);
+          nextUtterance.lang = 'fr-FR';
+          nextUtterance.rate = 0.85;
+          if (frVoice) nextUtterance.voice = frVoice;
+          nextUtterance.onend = arguments.callee;
+          window.speechSynthesis.speak(nextUtterance);
+          utterance = nextUtterance;
+        } else {
+          isPlaying = false;
+          document.getElementById('btn-play').textContent = '▶';
+          document.getElementById('btn-play').classList.remove('active');
+        }
+      };
+
+      window.speechSynthesis.speak(utterance);
+      isPlaying = true;
+      document.getElementById('btn-play').textContent = '⏸';
+      document.getElementById('btn-play').classList.add('active');
+    }
+
+    // ─── Init ───
+    renderLibrary();
   </script>
 </body>
 </html>
