@@ -64,6 +64,7 @@
     html {
       min-height: 100%;
       background: var(--bg);
+      scroll-behavior: smooth;
     }
 
     body {
@@ -143,14 +144,14 @@
     .library-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 16px;
+      gap: 24px;
     }
 
     .book-card {
       display: block;
       min-height: 258px;
       width: 100%;
-      padding: 18px;
+      padding: 24px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
       background: var(--surface);
@@ -245,8 +246,8 @@
       grid-template-columns: auto minmax(0, 1fr) auto;
       align-items: center;
       gap: 16px;
-      min-height: 64px;
-      padding: 10px 18px;
+      min-height: calc(64px + env(safe-area-inset-top, 0px));
+      padding: calc(10px + env(safe-area-inset-top, 0px)) 18px 10px;
       border-bottom: 1px solid var(--border);
       background: color-mix(in srgb, var(--surface) 93%, transparent);
       backdrop-filter: blur(18px);
@@ -282,10 +283,25 @@
       gap: 8px;
     }
 
+    .speed-select {
+      min-height: 40px;
+      width: 84px;
+      padding: 0 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
     .icon-button {
       display: inline-grid;
-      width: 40px;
-      height: 40px;
+      min-width: 44px;
+      width: 44px;
+      min-height: 44px;
+      height: 44px;
       place-items: center;
       border: 1px solid var(--border);
       border-radius: 999px;
@@ -326,7 +342,7 @@
 
     .column-labels {
       position: sticky;
-      top: 64px;
+      top: calc(64px + env(safe-area-inset-top, 0px));
       z-index: 20;
       border-bottom: 1px solid var(--border);
       background: var(--bg);
@@ -380,7 +396,15 @@
 
     .reader-line.active {
       border-left-color: var(--accent);
+      border-left-width: 5px;
       background: var(--accent-soft);
+      box-shadow: inset 0 0 0 1px var(--accent-line);
+    }
+
+    .reader-line.speaking {
+      border-left-color: var(--phonetic);
+      background: var(--phonetic-soft);
+      animation: speakingPulse 1200ms ease-in-out infinite;
     }
 
     .reader-line.translation {
@@ -427,6 +451,7 @@
       align-items: center;
       gap: 4px;
       overflow-x: auto;
+      overscroll-behavior-x: contain;
       padding: 10px 12px;
       border-bottom: 1px solid var(--border);
     }
@@ -461,6 +486,7 @@
       overflow: auto;
       max-height: calc(min(52vh, 560px) - 60px);
       padding: 18px;
+      overscroll-behavior: contain;
     }
 
     .tab-pane {
@@ -508,6 +534,29 @@
     .feature-card {
       border: 1px solid color-mix(in srgb, var(--grammar) 45%, transparent);
       background: var(--grammar-soft);
+    }
+
+    .tense-explanation {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid color-mix(in srgb, var(--grammar) 34%, transparent);
+    }
+
+    .tense-explanation + .tense-explanation {
+      margin-top: 14px;
+    }
+
+    .tense-name {
+      margin: 0 0 6px;
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .tense-line {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.65;
     }
 
     .rule-card {
@@ -560,6 +609,7 @@
       font-family: var(--mono);
       color: var(--text);
       overflow-wrap: anywhere;
+      word-break: break-all;
     }
 
     .words-table {
@@ -606,6 +656,9 @@
       z-index: 60;
       display: none;
       width: min(320px, calc(100vw - 24px));
+      max-width: calc(100vw - 24px);
+      max-height: calc(100vh - 24px);
+      overflow: auto;
       padding: 14px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -707,6 +760,11 @@
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
 
+    @keyframes speakingPulse {
+      0%, 100% { box-shadow: inset 0 0 0 1px var(--accent-line), 0 0 0 0 color-mix(in srgb, var(--phonetic) 26%, transparent); }
+      50% { box-shadow: inset 0 0 0 1px var(--phonetic), 0 0 0 6px transparent; }
+    }
+
     @media (max-width: 760px) {
       .library-shell {
         width: min(100% - 24px, 560px);
@@ -724,9 +782,29 @@
       }
 
       .reader-toolbar {
-        grid-template-columns: auto minmax(0, 1fr) auto;
+        grid-template-columns: auto minmax(0, 1fr);
         gap: 10px;
         padding-inline: 12px;
+      }
+
+      .reader-heading {
+        padding-right: 2px;
+      }
+
+      .toolbar-group {
+        grid-column: 1 / -1;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .toolbar-group .icon-button {
+        flex: 0 0 auto;
+      }
+
+      .speed-select {
+        flex: 1 1 auto;
+        min-height: 44px;
+        width: auto;
       }
 
       .reader-title {
@@ -766,7 +844,7 @@
       .reader-line {
         padding: 9px 12px 9px 14px;
         font-size: 1rem;
-        line-height: 1.75;
+        line-height: 1.8;
       }
 
       .analysis-panel {
@@ -823,6 +901,13 @@
         <div id="reader-subtitle" class="reader-subtitle"></div>
       </div>
       <div class="toolbar-group">
+        <select id="speed-select" class="speed-select" aria-label="Velocidad de lectura">
+          <option value="0.5">0.5x</option>
+          <option value="0.75">0.75x</option>
+          <option value="1">1x</option>
+          <option value="1.25">1.25x</option>
+          <option value="1.5">1.5x</option>
+        </select>
         <button id="play-button" class="icon-button primary" type="button" title="Reproducir línea" aria-label="Reproducir línea">▶</button>
         <button id="theme-toggle-reader" class="icon-button" type="button" title="Cambiar tema" aria-label="Cambiar tema">🌙</button>
       </div>
@@ -887,6 +972,58 @@
       es: "es-ES"
     };
 
+    const TENSE_EXPLANATIONS = [
+      {
+        key: "imparfait",
+        label: "Imparfait (pretérito imperfecto)",
+        what: "Tiempo del pasado que describe hábitos, estados, descripciones o situaciones de fondo.",
+        example: "Cuando era niño, comía helado todos los días. \"Era\" y \"comía\" son imperfecto.",
+        context: "Suele explicar el escenario o un estado continuo, no una acción puntual."
+      },
+      {
+        key: "passe compose",
+        label: "Passé Composé (pretérito perfecto compuesto / pretérito indefinido)",
+        what: "Tiempo del pasado para acciones terminadas, eventos puntuales o pasos de una narración.",
+        example: "Ayer vi una película y después cené. \"Vi\" y \"cené\" son acciones completadas.",
+        context: "Suele marcar lo que ocurrió, avanzando la historia."
+      },
+      {
+        key: "conditionnel present",
+        label: "Conditionnel Présent (condicional presente)",
+        what: "Modo/tiempo que expresa hipótesis, posibilidad, cortesía o una acción que dependería de una condición.",
+        example: "Yo viajaría mañana si tuviera dinero. \"Viajaría\" es condicional.",
+        context: "Suele presentar una posibilidad imaginada, una pregunta hipotética o una formulación más suave."
+      },
+      {
+        key: "present",
+        label: "Présent (presente)",
+        what: "Tiempo usado para acciones actuales, verdades generales, hábitos o narración inmediata.",
+        example: "Leo cada noche y ahora estudio francés. \"Leo\" y \"estudio\" están en presente.",
+        context: "Suele mostrar lo que ocurre ahora, lo que es habitual o lo que se afirma como válido."
+      },
+      {
+        key: "subjonctif",
+        label: "Subjonctif (subjuntivo)",
+        what: "Modo que aparece con deseo, duda, necesidad, finalidad, emoción o valoración subjetiva.",
+        example: "Quiero que vengas temprano. \"Vengas\" es subjuntivo.",
+        context: "Suele aparecer después de expresiones como finalidad, deseo, necesidad o incertidumbre."
+      },
+      {
+        key: "futur",
+        label: "Futur (futuro)",
+        what: "Tiempo que sitúa una acción después del momento presente o expresa una predicción.",
+        example: "Mañana leeré otro capítulo. \"Leeré\" está en futuro.",
+        context: "Suele proyectar una acción, promesa o consecuencia hacia adelante."
+      },
+      {
+        key: "plus que parfait",
+        label: "Plus-que-parfait (pluscuamperfecto)",
+        what: "Tiempo del pasado que indica una acción anterior a otra acción pasada.",
+        example: "Cuando llegué, ella ya había salido. \"Había salido\" es pluscuamperfecto.",
+        context: "Suele explicar qué ya había ocurrido antes del punto pasado que narra la frase."
+      }
+    ];
+
     const state = {
       catalog: null,
       currentBook: null,
@@ -896,6 +1033,9 @@
       activeLine: 0,
       activeTab: "grammar",
       isPlaying: false,
+      speechRate: 1,
+      currentUtterance: null,
+      playbackToken: 0,
       dictionaries: {},
       conjugations: {},
       tooltipToken: null,
@@ -909,6 +1049,7 @@
       sortBooks: document.getElementById("sort-books"),
       backButton: document.getElementById("back-button"),
       playButton: document.getElementById("play-button"),
+      speedSelect: document.getElementById("speed-select"),
       readerTitle: document.getElementById("reader-title"),
       readerSubtitle: document.getElementById("reader-subtitle"),
       sourceLabel: document.getElementById("source-label"),
@@ -931,6 +1072,7 @@
 
     async function init() {
       setupTheme();
+      setupSpeechRate();
       wireEvents();
       state.catalog = await loadCatalog();
       renderLibrary();
@@ -940,6 +1082,12 @@
       els.sortBooks.addEventListener("change", renderLibrary);
       els.backButton.addEventListener("click", showLibrary);
       els.playButton.addEventListener("click", togglePlayback);
+      els.speedSelect.addEventListener("change", () => {
+        setSpeechRate(els.speedSelect.value, true);
+        if (state.isPlaying) {
+          playCurrentLine();
+        }
+      });
       document.querySelectorAll(".panel-tab").forEach((button) => {
         button.addEventListener("click", () => switchTab(button.dataset.tab));
       });
@@ -985,6 +1133,20 @@
       });
     }
 
+    function setupSpeechRate() {
+      setSpeechRate(localStorage.getItem("lecteur.speechRate") || "1", false);
+    }
+
+    function setSpeechRate(value, persist) {
+      const allowedRates = [0.5, 0.75, 1, 1.25, 1.5];
+      const rate = Number(value);
+      state.speechRate = allowedRates.includes(rate) ? rate : 1;
+      els.speedSelect.value = String(state.speechRate);
+      if (persist) {
+        localStorage.setItem("lecteur.speechRate", String(state.speechRate));
+      }
+    }
+
     async function loadCatalog() {
       try {
         const catalog = await fetchJson("data/catalog.json");
@@ -1020,6 +1182,7 @@
 
       els.libraryGrid.innerHTML = books.map((book) => {
         const progress = getBookProgress(book);
+        const languagePair = getLanguagePair(book);
         return `
           <article class="book-card" role="button" tabindex="0" data-book-id="${escapeAttr(book.id)}" style="--book-color: ${escapeAttr(book.color || "#8B5E3C")}">
             <span class="book-cover" aria-hidden="true">${escapeHtml(book.icon || "📖")}</span>
@@ -1027,7 +1190,7 @@
             <p class="book-author">${escapeHtml(book.author || "Autor desconocido")}</p>
             <p class="book-description">${escapeHtml(book.description || "")}</p>
             <span class="book-meta-row">
-              <span>${escapeHtml((book.lang || "").toUpperCase())} | ${escapeHtml((book.translation || "es").toUpperCase())}</span>
+              <span>${escapeHtml(languagePair)}</span>
               <span>${Math.round(progress)}%</span>
             </span>
             <span class="progress-track" aria-hidden="true"><span class="progress-fill" style="--progress: ${progress}%"></span></span>
@@ -1044,6 +1207,12 @@
           }
         });
       });
+    }
+
+    function getLanguagePair(book) {
+      const source = String(book.lang || "").toUpperCase();
+      const target = String(book.translation || "es").toUpperCase();
+      return `${source || "?"}→${target || "ES"}`;
     }
 
     function getBookProgress(book) {
@@ -1213,13 +1382,13 @@
       }
 
       els.sourceColumn.innerHTML = state.sentences.map((sentence, index) => `
-        <div class="reader-line source ${index === state.activeLine ? "active" : ""}" role="button" tabindex="0" data-line="${index}">
+        <div class="reader-line source ${index === state.activeLine ? "active" : ""} ${state.isPlaying && index === state.activeLine ? "speaking" : ""}" role="button" tabindex="0" data-line="${index}">
           ${renderSourceLine(sentence, index)}
         </div>
       `).join("");
 
       els.translationColumn.innerHTML = state.sentences.map((sentence, index) => `
-        <div class="reader-line translation ${index === state.activeLine ? "active" : ""}" role="button" tabindex="0" data-line="${index}">
+        <div class="reader-line translation ${index === state.activeLine ? "active" : ""} ${state.isPlaying && index === state.activeLine ? "speaking" : ""}" role="button" tabindex="0" data-line="${index}">
           ${escapeHtml(sentence.translationText)}
         </div>
       `).join("");
@@ -1297,7 +1466,9 @@
       hideTooltip();
 
       document.querySelectorAll(".reader-line").forEach((line) => {
-        line.classList.toggle("active", Number(line.dataset.line) === nextIndex);
+        const isCurrentLine = Number(line.dataset.line) === nextIndex;
+        line.classList.toggle("active", isCurrentLine);
+        line.classList.toggle("speaking", state.isPlaying && isCurrentLine);
       });
 
       if (options.scroll !== false) {
@@ -1337,6 +1508,55 @@
       switchTab(state.activeTab);
     }
 
+    function getTenseExplanation(tenseName, contextText = "") {
+      const normalizedName = normalizeTenseName(tenseName);
+      const match = TENSE_EXPLANATIONS.find((entry) => tenseNameMatches(normalizedName, entry.key));
+      if (!match) {
+        return null;
+      }
+      return {
+        name: match.label,
+        what: match.what,
+        example: match.example,
+        context: contextText || match.context
+      };
+    }
+
+    function getTenseExplanations(tenseName, contextText = "") {
+      const normalizedName = normalizeTenseName(tenseName);
+      return TENSE_EXPLANATIONS
+        .filter((entry) => tenseNameMatches(normalizedName, entry.key))
+        .map((entry) => getTenseExplanation(entry.key, contextText || entry.context))
+        .filter(Boolean);
+    }
+
+    function renderTenseExplanations(tenseName, contextText) {
+      const explanations = getTenseExplanations(tenseName, contextText);
+      return explanations.map((explanation) => `
+        <div class="tense-explanation">
+          <p class="tense-name">${escapeHtml(explanation.name)}</p>
+          <p class="tense-line"><strong>📖 ¿Qué es?</strong> ${escapeHtml(explanation.what)}</p>
+          <p class="tense-line"><strong>Ejemplo:</strong> ${escapeHtml(explanation.example)}</p>
+          <p class="tense-line"><strong>En esta frase:</strong> ${escapeHtml(explanation.context)}</p>
+        </div>
+      `).join("");
+    }
+
+    function normalizeTenseName(value) {
+      return String(value || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/-/g, " ")
+        .toLowerCase();
+    }
+
+    function tenseNameMatches(normalizedName, key) {
+      if (key === "present" && /(?:conditionnel|subjonctif)\s+present/.test(normalizedName)) {
+        return normalizedName.replace(/(?:conditionnel|subjonctif)\s+present/g, "").includes(key);
+      }
+      return normalizedName.includes(key);
+    }
+
     function renderGrammar(sentence) {
       const grammar = sentence.grammar;
       if (!grammar) {
@@ -1353,6 +1573,7 @@
             <p class="section-label">⚡ Tiempo verbal clave</p>
             <h3 class="card-title">${escapeHtml(tense.tense || tense.title || "Tiempo verbal")}</h3>
             <p class="card-text">${escapeHtml(tense.explanation || "")}</p>
+            ${renderTenseExplanations(tense.tense || tense.title || "", tense.explanation || "")}
           </section>
         ` : ""}
         ${rules.map((rule) => `
@@ -1475,19 +1696,23 @@
 
     function positionTooltip(anchor) {
       const rect = anchor.getBoundingClientRect();
-      const tooltipWidth = Math.min(320, window.innerWidth - 24);
+      const viewportGap = 12;
+      const tooltipWidth = Math.min(320, window.innerWidth - viewportGap * 2);
       const topSpace = rect.top;
-      const preferredTop = topSpace > 210 ? rect.top - 12 : rect.bottom + 12;
-      const left = clamp(rect.left + rect.width / 2 - tooltipWidth / 2, 12, window.innerWidth - tooltipWidth - 12);
+      const preferredTop = topSpace > 210 ? rect.top - viewportGap : rect.bottom + viewportGap;
+      const left = clamp(rect.left + rect.width / 2 - tooltipWidth / 2, viewportGap, window.innerWidth - tooltipWidth - viewportGap);
 
       els.wordTooltip.style.width = `${tooltipWidth}px`;
       els.wordTooltip.style.left = `${left}px`;
-      els.wordTooltip.style.top = `${Math.max(12, preferredTop)}px`;
+      els.wordTooltip.style.top = `${Math.max(viewportGap, preferredTop)}px`;
 
       requestAnimationFrame(() => {
         const tooltipRect = els.wordTooltip.getBoundingClientRect();
-        if (tooltipRect.bottom > window.innerHeight - 12) {
-          els.wordTooltip.style.top = `${Math.max(12, rect.top - tooltipRect.height - 12)}px`;
+        const maxTop = Math.max(viewportGap, window.innerHeight - tooltipRect.height - viewportGap);
+        if (tooltipRect.bottom > window.innerHeight - viewportGap) {
+          els.wordTooltip.style.top = `${clamp(rect.top - tooltipRect.height - viewportGap, viewportGap, maxTop)}px`;
+        } else if (tooltipRect.top < viewportGap) {
+          els.wordTooltip.style.top = `${viewportGap}px`;
         }
       });
     }
@@ -1605,13 +1830,16 @@
         return;
       }
 
+      const playbackToken = state.playbackToken + 1;
+      state.playbackToken = playbackToken;
+      state.currentUtterance = null;
       window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(sentence.sourceText);
       const sourceLang = state.chapterData?.book_metadata?.source_language || state.currentBook?.lang || "fr";
       utterance.lang = SPEECH_LANGS[sourceLang] || sourceLang;
-      utterance.rate = 0.9;
+      utterance.rate = state.speechRate;
       utterance.onend = () => {
-        if (!state.isPlaying) {
+        if (!state.isPlaying || state.currentUtterance !== utterance || state.playbackToken !== playbackToken) {
           return;
         }
         if (state.activeLine < state.sentences.length - 1) {
@@ -1621,8 +1849,14 @@
           stopPlayback();
         }
       };
-      utterance.onerror = stopPlayback;
+      utterance.onerror = () => {
+        if (state.playbackToken === playbackToken) {
+          stopPlayback();
+        }
+      };
       state.isPlaying = true;
+      state.currentUtterance = utterance;
+      markSpeakingLine();
       els.playButton.textContent = "⏸";
       els.playButton.setAttribute("aria-label", "Pausar lectura");
       window.speechSynthesis.speak(utterance);
@@ -1630,11 +1864,22 @@
 
     function stopPlayback() {
       state.isPlaying = false;
+      state.currentUtterance = null;
+      state.playbackToken += 1;
       els.playButton.textContent = "▶";
       els.playButton.setAttribute("aria-label", "Reproducir línea");
+      document.querySelectorAll(".reader-line.speaking").forEach((line) => {
+        line.classList.remove("speaking");
+      });
       if ("speechSynthesis" in window) {
         window.speechSynthesis.cancel();
       }
+    }
+
+    function markSpeakingLine() {
+      document.querySelectorAll(".reader-line").forEach((line) => {
+        line.classList.toggle("speaking", Number(line.dataset.line) === state.activeLine);
+      });
     }
 
     function handleKeyboard(event) {
